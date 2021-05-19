@@ -192,10 +192,11 @@ nav {
 }
 
 .pfoot {
-    font-size: 1.2em;
+    font-size: 2em;
     font-family: 'Kanit', sans-serif;
     color: white !important;
     text-align: center;
+    margin-top: 20px;
 }
 
 .fontb {
@@ -220,6 +221,15 @@ nav {
     font-family: 'Kanit', sans-serif;
     color: #B9B9B9 !important;
     text-align: center;
+    margin-top: 20px;
+}
+
+.copy {
+    font-size: 1.4em;
+    font-family: 'Kanit', sans-serif;
+    color: #B9B9B9 !important;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .margin {
@@ -235,4 +245,27 @@ nav {
     color: white !important;
     text-align: center;
     font-size: 3em !important;
+}
+
+@media (max-width: 1400px) {
+    .img {
+        width: 220px;
+        height: 125px;
+        background-image: rgba(0, 0, 0, 0.8);
+        filter: brightness(0.4);
+    }
+    .marg {
+        margin-bottom: 100px;
+    }
+}
+
+.marg {
+    margin-bottom: 75px;
+}
+
+
+/*Registro*/
+
+.registro {
+    background-color: transparent;
 }
