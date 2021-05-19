@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMESLEAGUE</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a7f456fac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="bg-header">
+        <nav class="bg-header">
+            <img src="img/Logo_solo_Naranja.png" alt="" class="games">
+            <div class="boto">
+                <button class="btn btn-warning boton fonts">Inicia sessió</button>
+                <button class="btn btn-warning boton fonts">Registrarse</button>
+            </div>
+        </nav>
+    </header>
+    <div class="col-md-6 col-sm-12 inicio">
+        <img src="img/Logo_texto_Naranja.png" alt="" class="imgrande">
+        <h1 class="fonts size">Juga tornejos y guanya punts els tornejos més competitius.</h1>
+    </div>
+    <div class="col-md-6 col-sm-12 i">
+        <table class="margin cuadro">
+            <tr>
+                <th><img src="img/mbappe.jpg" alt="" class="img1 img center-block"></th>
+                <td><img src="img/leagueoflegends.jpg" alt="" class="img1 img center-block"></td>
+            </tr>
+
+            <tr>
+                <th><img src="img/LOL1.jpg" alt="" class="img center-block"></th>
+                <td><img src="img/fifa21-b8c07c8578df6a21e429c01f5dda2be5-1200x600.jpg" alt="" class="img center-block"></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div class="rank container-fluid">
+        <h2 style="color: white; text-align: center; padding-top: 300px;">Ranking</h2>
+        <p class="fonts">Aqui veurem el millors jugadors al seu respectiu joc</p>
+        <div class="col-md-6 col-sm-12 tablas tabla">
+            <div class="tabla center-block">
+                <p class="fonts">LOL</p>
+                <table class="table tabla default font btm">
+                    <tr class="top_tabla">
+                        <td>
+                            Puesto
+                        </td>
+                        <td>
+                            Nombre de usuario
+                        </td>
+                        <td>
+                            Puntuación
+                        </td>
+                    </tr>
+                    <tr class="gray_tabla">
+                        <th>
+                            1
+                        </th>
+                        <th>
+                            Jugador 1
+                        </th>
+                        <th>
+                            500
+                        </th>
+                    </tr>
+                    <tr class="white_tabla">
+                        <th>
+                            2
+                        </th>
+                        <th>
+                            Jugador 2
+                        </th>
+                        <th>
+                            450
+                        </th>
+                    </tr>
+                    <tr class="gray_tabla">
+                        <th>
+                            3
+                        </th>
+                        <th>
+                            Jugador 3
+                        </th>
+                        <th>
+                            400
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 tablas tabla">
+            <div class="tabla center-block">
+                <p class="fonts">FIFA</p>
+                <table class="table tabla default font btm">
+                    <tr class="top_tabla ">
+                        <td>
+                            Puesto
+                        </td>
+                        <td>
+                            Nombre de usuario
+                        </td>
+                        <td>
+                            Puntuación
+                        </td>
+                    </tr>
+                    <tr class="gray_tabla ">
+                        <th>
+                            1
+                        </th>
+                        <th>
+                            Jugador 1
+                        </th>
+                        <th>
+                            500
+                        </th>
+                    </tr>
+                    <tr class="white_tabla">
+                        <th>
+                            2
+                        </th>
+                        <th>
+                            Jugador 2
+                        </th>
+                        <th>
+                            450
+                        </th>
+                    </tr>
+                    <tr class="gray_tabla">
+                        <th>
+                            3
+                        </th>
+                        <th>
+                            Jugador 3
+                        </th>
+                        <th>
+                            400
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="iconos">
+        <h1 class="fonts margin">Una web de tornejos que pensa en tu</h1>
+    </div>
+    <div class="icn col-md-4 col-sm-12 centrar text-center">
+        <span>
+            <i class="fas fa-chart-bar fa-10x fa-align-center"></i>
+        </span>
+        <p class="fonts">Seguiment d'estadístiques personals diferenciades en cada joc</p>
+    </div>
+    <div class="icn col-md-4 col-sm-12 text-center">
+        <span>
+            <i class="fas fa-gamepad fa-10x fa-align-center"></i>
+        </span>
+        <p class="fonts">Competitivitat amb total respecte entre adversaris</p>
+    </div>
+    <div class="icn col-md-4 col-sm-12 text-center">
+        <span>
+            <i class="fas fa-user-times fa-10x fa-align-center"></i>
+        </span>
+        <p class="fonts">Seguridad ante los competidores que ponen falsos resultados</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</body>
+
+</html>

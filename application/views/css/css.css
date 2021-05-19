@@ -1,0 +1,185 @@
+body {
+    background-image: url(../img/firespark1.jpg);
+}
+
+.bg-header {
+    background-color: black;
+    padding-bottom: 20px;
+    margin-top: 5px;
+}
+
+.fonts {
+    font-family: 'Kanit', sans-serif;
+    color: white !important;
+    text-align: center;
+    font-size: 2em;
+}
+
+.size {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.boton {
+    background-color: #FF5E00 !important;
+    border-color: #FF5E00 !important;
+    margin: 0px 200px 10px 10px;
+    float: right;
+    width: 100px;
+}
+
+.boton:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.75s;
+}
+
+nav {
+    width: 100%;
+    float: right;
+}
+
+.inicio {
+    margin: 225px 0px 10px 0px;
+    text-align: center;
+}
+
+.tablas {
+    margin: 150px 0px 10px 0px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .inicio {
+        margin: 10px 10px 10px 10px;
+    }
+}
+
+.img1 {
+    margin-block-start: 150px;
+}
+
+.img {
+    width: 250px;
+    height: 150px;
+    background-image: rgba(0, 0, 0, 0.8);
+    filter: brightness(0.4);
+}
+
+.img:hover {
+    filter: none;
+    transition: 0.4s;
+}
+
+.cuadro {
+    display: inline-block;
+    margin: auto;
+    margin-bottom: 160px;
+}
+
+@media (max-width: 845px) {
+    .i {
+        margin: 0 auto;
+        display: grid;
+    }
+}
+
+@media (max-width: 1000px) {
+    .img1 {
+        margin-block-start: 150px;
+    }
+    .img {
+        width: 200px;
+        height: 100px;
+    }
+    .tabla {
+        width: 350px;
+        margin-bottom: 75px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .tabla {
+        width: 500px;
+        margin-bottom: 20px;
+    }
+}
+
+.top_tabla {
+    background-color: #FF5E00;
+}
+
+.top_tabla:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: 0.75s;
+}
+
+.gray_tabla {
+    background-color: #B9B9B9;
+}
+
+.gray_tabla:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: 0.75s;
+}
+
+.white_tabla {
+    background-color: white;
+}
+
+.white_tabla:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: 0.75s;
+}
+
+.font {
+    font-family: 'Kanit', sans-serif;
+    color: black !important;
+    text-align: center;
+}
+
+.rank {
+    margin-top: 100px;
+    margin-bottom: 00px;
+}
+
+.iconos {
+    margin: 100px 0px 20px 0px;
+}
+
+.games {
+    width: 100px;
+    margin: 0px 0px 0px 50px;
+}
+
+.imgrande {
+    width: 200px;
+}
+
+.icn {
+    color: #FF5E00;
+    width: 200px;
+}
+
+.centrar {
+    margin: 0 auto;
+}
+
+.btm {
+    margin-bottom: 100px;
+}
