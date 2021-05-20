@@ -103,15 +103,138 @@ nav {
     }
     .tabla {
         width: 350px;
+        height: 175px;
         margin-bottom: 75px;
+    }
+    .pfoot {
+        font-size: 1.2em;
+        font-family: 'Kanit', sans-serif;
+        color: white !important;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .fonts {
+        font-family: 'Kanit', sans-serif;
+        color: white !important;
+        text-align: center;
+        font-size: 1.2em;
     }
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 801px) {
+    .img {
+        width: 200px;
+        height: 100px;
+        background-image: rgba(0, 0, 0, 0.8);
+        filter: brightness(0.4);
+    }
+    .marg {
+        margin-bottom: 50px !important;
+        padding: 0%;
+    }
+    .h2 {
+        padding: auto !important;
+    }
+    .i {
+        max-width: none !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .i {
+        max-width: none !important;
+        margin-bottom: auto !important;
+    }
+    .rank {
+        margin-top: auto !important;
+    }
+    .h2 {
+        padding: auto !important;
+        font-family: 'Kanit', sans-serif;
+        color: white !important;
+        text-align: center;
+        font-size: 2em !important;
+    }
+}
+
+@media (min-width: 1001px) {
+    .img1 {
+        margin-block-start: 150px;
+    }
+    .img {
+        width: 200px;
+        height: 100px;
+    }
+    .tabla {
+        width: 400px;
+        height: 200px;
+        margin-bottom: 75px;
+        margin: 60px 0px 0px 0px;
+        text-align: center;
+    }
+    .pfoot {
+        font-size: 1.4em;
+        font-family: 'Kanit', sans-serif;
+        color: white !important;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .fonts {
+        font-family: 'Kanit', sans-serif;
+        color: white !important;
+        text-align: center;
+        font-size: 1.4em;
+    }
+    .fonts1 {
+        font-family: 'Kanit', sans-serif;
+        color: white !important;
+        text-align: center;
+        font-size: 2em;
+    }
+    .img {
+        width: 220px;
+        height: 125px;
+        background-image: rgba(0, 0, 0, 0.8);
+        filter: brightness(0.4);
+    }
+    .marg {
+        margin-bottom: 100px;
+    }
+    .h2 {
+        font-family: 'Kanit', sans-serif;
+        color: white !important;
+        text-align: center;
+        font-size: 3em !important;
+    }
+}
+
+@media (min-width: 1226px) {
     .tabla {
         width: 500px;
         height: 200px;
         margin-bottom: 20px;
+    }
+    .pfoot {
+        font-size: 2em;
+        font-family: 'Kanit', sans-serif;
+        color: white !important;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .img {
+        width: 300px;
+        height: 175px;
+        background-image: rgba(0, 0, 0, 0.8);
+        filter: brightness(0.4);
+    }
+    .marg {
+        margin-bottom: 100px;
+    }
+    .h2 {
+        font-family: 'Kanit', sans-serif;
+        color: white !important;
+        text-align: center;
+        font-size: 3em !important;
     }
 }
 
@@ -191,14 +314,6 @@ nav {
     margin-bottom: 100px;
 }
 
-.pfoot {
-    font-size: 2em;
-    font-family: 'Kanit', sans-serif;
-    color: white !important;
-    text-align: center;
-    margin-top: 20px;
-}
-
 .fontb {
     font-size: 1.2em;
     font-family: 'Kanit', sans-serif;
@@ -238,25 +353,6 @@ nav {
 
 .m {
     margin-top: 40px;
-}
-
-.h2 {
-    font-family: 'Kanit', sans-serif;
-    color: white !important;
-    text-align: center;
-    font-size: 3em !important;
-}
-
-@media (max-width: 1400px) {
-    .img {
-        width: 220px;
-        height: 125px;
-        background-image: rgba(0, 0, 0, 0.8);
-        filter: brightness(0.4);
-    }
-    .marg {
-        margin-bottom: 100px;
-    }
 }
 
 .marg {
