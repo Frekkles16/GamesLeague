@@ -362,6 +362,77 @@ nav {
 
 /*Registro*/
 
-.registro {
+.box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px 40px;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    width: 100%;
     background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    padding: 10px;
+}
+
+input:focus {
+    border-bottom: 2px solid #FF5E00;
+    transition: 0.75s;
+    border: #FF5E00;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FF5E00;
+    opacity: 1;
+    text-align: center;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #FF5E00;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #FF5E00;
+}
+
+.lock {
+    margin-bottom: 25px;
+}
+
+.in {
+    width: 150px;
+    margin: 20px;
+    text-align: center;
 }
