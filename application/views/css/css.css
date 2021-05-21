@@ -1,3 +1,5 @@
+    /*Fondo*/
+    
     html {
         background-image: url(../img/firespark1.jpg);
     }
@@ -13,18 +15,8 @@
         background-image: url(../img/firespark1.jpg);
         background-repeat: repeat;
     }
-    
-    .bg-header {
-        background-color: black;
-        padding-bottom: 20px;
-        margin-top: 5px;
-    }
-    
-    .bg-footer {
-        background-color: black;
-        padding-bottom: 50px;
-        margin-top: 5px;
-    }
+    /*End Fondo*/
+    /*Estilos*/
     
     .fonts {
         font-family: 'Kanit', sans-serif;
@@ -37,6 +29,27 @@
         margin-top: 20px;
         font-size: 1.5em;
     }
+    /*End Estilos*/
+    /*Cabecera */
+    
+    .bg-header {
+        background-color: black;
+        padding-bottom: 20px;
+        margin-top: 5px;
+    }
+    
+    nav {
+        width: 100%;
+        float: right;
+    }
+    /*End Cabecera*/
+    
+    .bg-footer {
+        background-color: black;
+        padding-bottom: 50px;
+        margin-top: 5px;
+    }
+    /*Boton*/
     
     .boton {
         background-color: #FF5E00 !important;
@@ -54,21 +67,21 @@
         transform: scale(1.1);
         transition: 0.75s;
     }
-    
-    nav {
-        width: 100%;
-        float: right;
-    }
+    /*End Boton*/
+    /*Inicio*/
     
     .inicio {
         margin: 225px 0px 10px 0px;
         text-align: center;
     }
+    /*End Inicio*/
+    /*Tablas*/
     
     .tablas {
         margin: 150px 0px 10px 0px;
         text-align: center;
     }
+    /*Tablas*/
     
     @media (max-width: 800px) {
         .inicio {
