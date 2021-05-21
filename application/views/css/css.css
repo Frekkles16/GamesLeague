@@ -51,6 +51,10 @@
     }
     /*Boton*/
     
+    .boto {
+        margin-top: 15px;
+    }
+    
     .boton {
         background-color: #FF5E00 !important;
         border-color: #FF5E00 !important;
@@ -88,6 +92,7 @@
             margin: 10px 10px 10px 10px;
         }
     }
+    /*Imagenes*/
     
     .img1 {
         margin-block-start: 150px;
@@ -119,6 +124,7 @@
     }
     
     @media (max-width: 1000px) {
+        /*Imagenes*/
         .img1 {
             margin-block-start: 150px;
         }
@@ -147,6 +153,7 @@
     }
     
     @media (max-width: 801px) {
+        /*Imagenes*/
         .img {
             width: 200px;
             height: 100px;
@@ -459,6 +466,7 @@
         margin: 20px;
         text-align: center;
     }
+    /*Propiedades*/
     
      ::-webkit-input-placeholder {
         opacity: 1;
@@ -534,8 +542,5 @@
     input[type="date"] {
         cursor: pointer;
     }
-    
-    .boto {
-        margin-top: 15px;
-    }
+    /*End Propiedades*/
     /* Modern Browsers */
