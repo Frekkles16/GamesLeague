@@ -509,4 +509,8 @@
     input[type="date"] {
         cursor: pointer;
     }
+    
+    .boto {
+        margin-top: 15px;
+    }
     /* Modern Browsers */
