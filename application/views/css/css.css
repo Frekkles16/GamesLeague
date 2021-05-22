@@ -544,3 +544,69 @@
     }
     /*End Propiedades*/
     /* Modern Browsers */
+    /*Perfil*/
+    /*Background*/
+    
+    .back {
+        background-image: url(../img/triangulos.jpg) !important;
+        height: 40%;
+        width: 100%;
+        background-repeat: repeat-x;
+    }
+    /*End Background*/
+    
+    .foto-perfil {
+        background-color: #FF5E00;
+        width: 125px;
+        height: 125px;
+        border-radius: 150px;
+        padding: 5px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .foto {
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border-radius: 20px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .p {
+        margin-top: 50px;
+        float: left !important;
+    }
+    
+    .foto-perfil-p {
+        color: #FF5E00;
+        font-family: 'Kanit', sans-serif;
+        text-align: center;
+        font-size: 1.5em;
+        text-align: left;
+    }
+    
+    .perfil-padding {
+        padding: 50px;
+        width: 500px;
+    }
+    /*End Perfil*/
+    
+    .select select {
+        background-color: #B9B9B9;
+        width: 150px;
+    }
+    
+    .tablas {
+        width: 500px;
+        height: 200px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-size: 1.5em;
+        padding: 20px;
+    }
+    
+    .marg {
+        padding: 20px;
+    }
