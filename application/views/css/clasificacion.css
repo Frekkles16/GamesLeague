@@ -1,0 +1,23 @@
+.fonts1 {
+    color: #FF5E00 !important;
+    font-size: 2.8em;
+    text-align: center;
+}
+
+.fonts2 {
+    color: #FF5E00 !important;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.fonts3 {
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.bg-reglas {
+    background-color: black;
+    padding-bottom: 50px;
+}

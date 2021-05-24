@@ -1,0 +1,150 @@
+.box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px 40px;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    padding: 10px;
+}
+
+input:focus {
+    border-bottom: 2px solid #FF5E00;
+    transition: 0.75s;
+    border: #FF5E00;
+}
+
+ ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1;
+    text-align: center;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+}
+
+.lock {
+    margin-bottom: 25px;
+}
+
+.in {
+    width: 150px;
+    margin: 20px;
+    text-align: center;
+}
+/*Propiedades*/
+
+ ::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+/* Chrome <=56, Safari < 10 */
+
+ :-moz-placeholder {
+    opacity: 1;
+    -moz-transition: opacity .5s;
+    transition: opacity .5s;
+}
+/* FF 4-18 */
+
+ ::-moz-placeholder {
+    opacity: 1;
+    -moz-transition: opacity .5s;
+    transition: opacity .5s;
+}
+/* FF 19-51 */
+
+ :-ms-input-placeholder {
+    opacity: 1;
+    -ms-transition: opacity .5s;
+    transition: opacity .5s;
+}
+/* IE 10+ */
+
+ ::placeholder {
+    opacity: 1;
+    transition: opacity .5s;
+}
+/* Modern Browsers */
+
+*:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+/* Chrome <=56, Safari < 10 */
+
+*:focus:-moz-placeholder {
+    opacity: 0;
+}
+/* FF 4-18 */
+
+*:focus::-moz-placeholder {
+    opacity: 0;
+}
+/* FF 19-50 */
+
+*:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+/* IE 10+ */
+
+*:focus::placeholder {
+    opacity: 0;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 2px;
+    opacity: 0.5;
+    filter: invert(0.8);
+    width: 30px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+input[type="date"] {
+    cursor: pointer;
+}
