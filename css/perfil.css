@@ -1,0 +1,146 @@
+.back {
+    background-image: url(../img/triangulos.jpg) !important;
+    height: 40%;
+    width: 100%;
+    background-repeat: repeat-x;
+}
+/*End Background*/
+
+.foto-perfil {
+    background-color: #FF5E00;
+    width: 125px;
+    height: 125px;
+    border-radius: 150px;
+    padding: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+.foto {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: block;
+}
+
+.p {
+    margin-bottom: 50px;
+    float: left !important;
+}
+
+.foto-perfil-p {
+    color: #FF5E00;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.perfil-padding {
+    padding: 50px;
+    width: 500px;
+}
+/*End Perfil*/
+
+.select select {
+    background-color: #B9B9B9;
+    width: 150px;
+}
+
+.tabla {
+    margin: 50px 0px 10px 0px;
+    text-align: center;
+    width: 70%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .tablas-col {
+        margin: auto;
+        margin-bottom: 0px !important;
+    }
+    .perfil-padding {
+        padding: 20px;
+        width: 300px !important;
+    }
+    .foto-perfil-p {
+        color: #FF5E00;
+        font-family: 'Kanit', sans-serif;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    .back {
+        background-image: url(../img/triangulos.jpg) !important;
+        height: 40%;
+        width: 100%;
+        background-repeat: repeat-x;
+    }
+    .perfil {
+        margin: 0 auto;
+        display: block;
+    }
+    .tabla {
+        margin: 50px 0px 10px 0px;
+        text-align: center;
+        width: 70%;
+        height: 250px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 510px) {
+    .tablas-col {
+        margin: auto;
+        margin-bottom: 0px !important;
+    }
+    .perfil-padding {
+        padding: 20px;
+        width: 300px !important;
+    }
+    .foto-perfil-p {
+        color: #FF5E00;
+        font-family: 'Kanit', sans-serif;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    .back {
+        background-image: url(../img/triangulos.jpg) !important;
+        height: 50%;
+        width: 100%;
+        background-repeat: repeat-x;
+    }
+    .perfil {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.marg {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .tablas-col {
+        margin: auto;
+        margin-bottom: 75px;
+    }
+}
+.box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px 40px;
+}

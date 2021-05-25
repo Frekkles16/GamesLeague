@@ -1,0 +1,63 @@
+.font {
+    font-family: 'Kanit', sans-serif;
+    color: white !important;
+    text-align: center;
+    font-size: 3em;
+}
+
+.box {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 100%;
+    max-height: 100%;
+    padding: 50px 0px 300px 0px;
+    margin: 50px 50px;
+}
+
+.nombre {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #FF5E00;
+}
+
+.btn {
+    margin-top: 100px;
+}
+
+.btn-style {
+    background-color: #FF5E00;
+    width: 150px;
+    height: 75px;
+    border-radius: 50px;
+    font-size: 2em;
+    border-color: #FF5E00;
+}
+
+.btn-style:hover {
+    background-color: black;
+    color: white !important;
+    transition: 1s;
+    border-color: black;
+}
+
+@media (max-width: 768px) {
+    .rt {
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 50px;
+    }
+    .btn-style {
+        background-color: #FF5E00;
+        width: 150px;
+        height: 75px;
+        border-radius: 50px;
+        font-size: 2em;
+        border-color: #FF5E00;
+        margin-bottom: 50px;
+    }
+}
