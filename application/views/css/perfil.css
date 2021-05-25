@@ -67,10 +67,14 @@
         font-family: 'Kanit', sans-serif;
         text-align: center;
         font-size: 1.2em;
+        margin: 0 auto;
+    }
+    .fonts {
+        display: block;
     }
     .back {
         background-image: url(../img/triangulos.jpg) !important;
-        height: 40%;
+        height: 250px;
         width: 100%;
         background-repeat: repeat-x;
     }
@@ -86,6 +90,9 @@
         background-color: rgba(255, 255, 255, 0.2);
         color: white;
         padding: 20px;
+    }
+    .perfil {
+        margin-top: 20px;
     }
 }
 
@@ -106,13 +113,22 @@
     }
     .back {
         background-image: url(../img/triangulos.jpg) !important;
-        height: 50%;
+        height: 250px;
         width: 100%;
         background-repeat: repeat-x;
     }
     .perfil {
         margin: 0 auto;
         display: block;
+    }
+    .tabla {
+        margin: 50px 0px 10px 0px;
+        text-align: center;
+        width: 70%;
+        height: 250px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 20px;
     }
 }
 
@@ -127,7 +143,7 @@
     }
     .back {
         background-image: url(../img/triangulos.jpg) !important;
-        height: 40%;
+        height: 200px;
         width: 100%;
         background-repeat: repeat-x;
     }
@@ -144,4 +160,16 @@
     max-width: 100%;
     max-height: 100%;
     padding: 20px 40px;
+}
+
+.perfil {
+    margin-top: 20px;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
