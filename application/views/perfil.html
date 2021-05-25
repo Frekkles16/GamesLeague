@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAMESLEAGUE</title>
     <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/perfil.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -24,69 +24,79 @@
 <body>
     <!--DE AQUI-->
     <header class="bg-header">
-        <nav class="bg-header">
-            <img src="img/Logo_solo_Naranja.png" alt="" class="games">
-            <div class="boto">
-                <button class="btn btn-warning boton fonts">Inicia sessió</button>
-                <button class="btn btn-warning boton fonts">Registrarse</button>
-            </div>
+        <nav class="bg-header-">
+
         </nav>
     </header>
     <!--HASTA AQUI-->
-    <main>
-        <section class="registro">
-            <div class="container">
-                <div class="box">
-                    <form>
-                        <div class="row">
-                            <span class="icn col-md-12 col-sm-12 text-center lock">
-                                <i class="fas fa-lock fa-9x fa-align-center"></i>
-                            </span>
-                            <div class="col-md-6 col-sm-12 form_group">
-                                <span class="icn text-center lock">
-                                    <i class="fas fa-user fa-2x fa-align-center"></i>
-                                </span>
-                                <input class="in" type="text" name="" placeholder="Nom" style="color: white;" class="form__field">
-                            </div>
-                            <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
-                                    <i class="fas fa-at fa-2x fa-align-center"></i>
-                                </span>
-                                <input class="in" type="email" name="" placeholder="Email" style="color: white;" class="custom-input">
-                            </div>
-                            <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
-                                    <i class="fas fa-calendar-minus fa-2x fa-align-center"></i>
-                                </span>
-                                <input class="in" type="date" name="" placeholder="" style="color: white;" class="">
-                            </div>
-                            <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
-                                    <i class="fas fa-user-shield fa-2x fa-align-center"></i>
-                                </span>
-                                <input class="in" type="text" name="" placeholder="Nom d'usuari" style="color: white;" class="custom-input">
-                            </div>
-                            <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
-                                    <i class="fas fa-key fa-2x fa-align-center"></i>
-                                </span>
-                                <input class="in" type="password" name="" placeholder="Contrasenya" style="color: white;" class="custom-input">
-                            </div>
-                            <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
-                                    <i class="fas fa-key fa-2x fa-align-center"></i>
-                                </span>
-                                <input class="in" type="password" name="" placeholder="Comprovar contrasenya" style="color: white;" class="custom-input">
-                            </div>
-                        </div>
-                        <div class="m-0 row justify-content-center boto">
-                            <button class="btn mx-auto btn-warning boton fonts">Registrarse</button>
-                        </div>
-                    </form>
+    <main class="back">
+        <section class="perfil col-md-2 col-sm-6">
+            <div class="foto-perfil">
+                <img src="img/Logo_solo_Negro.png" alt="" srcset="" class="foto">
+            </div>
+        </section>
+        <section class="perfil col-md-10 col-sm-6">
+            <div class="container p">
+                <div class="box perfil-padding">
+                    <p class="foto-perfil-p">Nom d'usuari</p>
+                    <br>
+                    <p class="foto-perfil-p">@idjuego</p>
+                    <br>
+                    <p class="foto-perfil-p">Cuando se creo la cuenta</p>
                 </div>
             </div>
         </section>
     </main>
+    <br>
+    <div class="perfil-body">
+        <p class="fonts">Seleciona el joc per veure les teves estadístiques </p>
+        <div class="select mx-auto" style="width:150px;">
+            <select>
+              <option value="0" class="">Selecciona:</option>
+              <option value="1" class="">LOL</option>
+              <option value="2" class="">FIFA</option>
+            </select>
+        </div>
+    </div>
+    <div class="tabla mx-auto ">
+        <div class="col-md-4 col-sm-12 tablas-col">
+            Torneos jugados
+            <p class="mx-auto">65</p>
+        </div>
+        <div class="col-md-4 col-sm-12 tablas-col">
+            Partidos jugados
+            <p class="mx-auto">65</p>
+        </div>
+        <div class="col-md-4 col-sm-12 tablas-col">
+            Victorias
+            <p class="mx-auto">65</p>
+        </div>
+        <div class="col-md-6 col-sm-12 ">
+            Goles a favor
+            <p class="mx-auto">65</p>
+        </div>
+        <div class="col-md-6 col-sm-12 ">
+            Goles en contra
+            <p class="mx-auto">65</p>
+        </div>
+    </div>
+    <footer class="bg-footer">
+        <div class="bg-footer">
+            <hr color="#FF5E00 " style="margin-top: 300px; " size="0.5px ">
+            <div class="col-md-3 col-sm-12 ">
+                <p class="pfoot ">LA MEJOR WEB DE TORNEOS PARA COMPETIR</p>
+            </div>
+            <div class="col-md-3 col-sm-12 ">
+                <p class="fontf ">Privacidad</p>
+            </div>
+            <div class="col-md-3 col-sm-12 ">
+                <p class="fontf ">Condiciones</p>
+            </div>
+            <div class="col-md-3 col-sm-12 ">
+                <p class="copy">Copyright 2021 GAMESLEAGUE</p>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
     <meta name="viewport " content="width=device-width, initial-scale=1.0 ">

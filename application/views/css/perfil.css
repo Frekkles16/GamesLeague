@@ -1,11 +1,3 @@
-.back {
-    background-image: url(../img/triangulos.jpg) !important;
-    height: 40%;
-    width: 100%;
-    background-repeat: repeat-x;
-}
-/*End Background*/
-
 .foto-perfil {
     background-color: #FF5E00;
     width: 125px;
@@ -42,6 +34,8 @@
     padding: 50px;
     width: 500px;
 }
+
+
 /*End Perfil*/
 
 .select select {
@@ -131,7 +125,14 @@
         margin: auto;
         margin-bottom: 75px;
     }
+    .back {
+        background-image: url(../img/triangulos.jpg) !important;
+        height: 40%;
+        width: 100%;
+        background-repeat: repeat-x;
+    }
 }
+
 .box {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50px;
