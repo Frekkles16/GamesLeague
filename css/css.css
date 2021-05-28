@@ -11,10 +11,10 @@ body {
     height: 100%;
 }
 
-.mid {
+/*.mid {
     background-image: url(../img/firespark1.jpg);
     background-repeat: repeat;
-}
+}*/
 /*End Fondo*/
 /*Estilos*/
 
@@ -40,7 +40,7 @@ body {
 
 nav {
     width: 100%;
-    float: right;
+    /*float: right;*/
 }
 /*End Cabecera*/
 
@@ -98,14 +98,14 @@ nav {
     margin-block-start: 150px;
 }
 
-.img {
+.imag {
     width: 300px;
     height: 175px;
     background-image: rgba(0, 0, 0, 0.8);
     filter: brightness(0.4);
 }
 
-.img:hover {
+.imag:hover {
     filter: none;
     transition: 0.4s;
 }

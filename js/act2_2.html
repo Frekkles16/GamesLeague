@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="act2_2.js"></script>
+    <title>Activitat 2_2</title>
+</head>
+
+<body>
+    <div id="iniciar">
+
+    </div>
+
+   
+    <div id="formulario">
+        <h1>Bolsa de trabajo</h1>
+        Nombre<input id="nombre" type="text">
+        Apellido<input id="apellido" type="text">
+        Email<input id="email" type="text">
+        DNI<input id="dni" type="text">
+        <br><br>
+
+        <label for="estudios">Estudios:</label>
+        <select name="estudios" id="estudios" form="carform">
+            <option></option>
+            <option value="grado">Grado Superior</option>
+            <option value="carrera">Carrera Universitaria</option>
+        </select>
+
+        <br>
+
+        <label for="centro">Centro:</label>
+        <select name="centro" id="centro" form="carform">
+            <option></option>
+            <option value="jv">Jaume Viladoms</option>
+            <option value="uab">Universidad Autonoma de Barcelona</option>
+        </select>
+
+        <button onclick="comprobar()">Enviar</button>
+
+    
+</div>
+   
+
+
+    
+
+
+
+</body>
+
+</html>

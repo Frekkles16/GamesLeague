@@ -1,0 +1,57 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <script src="../perfil.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.11/lib/OpenLayers.js"></script>
+
+    <style>
+        #mapdiv {
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="text-center" id="nombres"></h1>
+    
+	<h2 class="text-center" id="titulo"></h2>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <p>Nombre: <span id="nombre" ></span></p><br>
+                <p>Apellido: <span id="apellido" ></span></p><br>
+                <p>Edad: <span id="edad" ></span></p>
+                <br>
+                <p><strong>Añadir Mensaje</strong></p>
+                <textarea  id="mensaje" cols="20" rows="5"></textarea>
+                <br><br>
+                <button class="btn btn-primary" onclick="comentario()">Añadir</button>
+            </div>
+            <div class="col-9">
+              <div id="mapdiv"></div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+	  <script>
+          comprobar();
+		  iniciar();
+	  </script>
+
+
+</body>
+</html>
