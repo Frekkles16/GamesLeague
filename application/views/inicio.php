@@ -9,7 +9,7 @@
     <link rel="stylesheet" href = "<?php echo base_url(); ?>css/css.css">
     <link rel="stylesheet" href = "<?php echo base_url(); ?>css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header class="bg-header">
+    <header>
         <!-- <nav class="bg-header">
             
             <div class="boto">
@@ -29,17 +29,17 @@
                 <button class="btn btn-warning boton fonts">Registrarse</button>
             </div>
         </nav> -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand nombre" href="#"><img src="img/Logo_solo_Naranja.png" alt="" class="games"></a>
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand nombre" href="#"><img src="<?php echo base_url(); ?>img/Logo_solo_Naranja.png" alt="" class="games"></a>
             <div class="collapse navbar-collapse justify-content-end menu" id="navbarNav">
                 <ul class="navbar-nav ">
 
                     <li class="nav-item">
-                        <a class="nav-link boton fonts" href="">Inicia sessió</a>
+                        <a class="nav-link boton fonts" href="<?php echo site_url('torneig/login')?>">Inicia sessió</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link boton fonts" href="<?php echo site_url('torneig/ir_registro') ?>">Registrarse</a>
+                        <a class="nav-link boton fonts" href="<?php echo site_url('torneig/registro') ?>">Registrarse</a>
                     </li>
                 </ul>
             </div>
@@ -50,32 +50,64 @@
                 </button>
                 </nav>
             </div>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-lg navbar-light navbar-dark">
+          <a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>img/Logo_solo_Naranja.png" alt="" class="games"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav ml-auto ">
+              <li class="nav-item active">
+                <a class="nav-link  fonts " href="<?php echo site_url('torneig/login')?>">Inicia sessió</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  fonts" href="<?php echo site_url('torneig/registro') ?>">Registrarse</a>
+              </li>
+            </ul>
+          </div>
         </nav>
 
     </header>
 
-    <div class="mid">
-        <div class="col-md-6 col-sm-12 inicio">
-            <img src="<?php echo base_url(); ?>img/Logo_texto_Naranja.png" alt="" class="imgrande">
-            <h1 class="fonts size">Juga tornejos i guanya punts els tornejos més competitius.</h1>
-        </div>
-        <div class="col-md-6 col-sm-12 i" style="margin-bottom: 50px;">
-            <table class="margin cuadro">
-                <tr>
-                    <th><img src="<?php echo base_url(); ?>img/mbappe.jpg" alt="" class="img1 img center-block"></th>
-                    <td><img src="<?php echo base_url(); ?>img/leagueoflegends.jpg" alt="" class="img1 img center-block"></td>
-                </tr>
 
-                <tr>
-                    <th><img src="<?php echo base_url(); ?>img/LOL1.jpg" alt="" class="img center-block"></th>
-                    <td><img src="<?php echo base_url(); ?>img/fifa21-b8c07c8578df6a21e429c01f5dda2be5-1200x600.jpg" alt="" class="img center-block"></td>
-                </tr>
-            </table>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 text-center">
+                <img src="<?php echo base_url(); ?>img/Logo_texto_Naranja.png" alt="" class="imgrande">
+                <h1 class="fonts size">Juga tornejos i guanya punts els tornejos més competitius.</h1>
+            </div>
+        
+            <div class="col-md-6 col-sm-12" >   
+                <table class="table">
+                    <thead>
+                        <tr>
+                          <th style="border-bottom: 0px !important; padding: 0px !important;" scope="col"><img src="<?php echo base_url(); ?>img/leagueoflegends.jpg" alt="" class="imag img-fluid center-block"></th>
+                          <th style="border-bottom: 0px !important; padding: 0px !important;" scope="col"><img src="<?php echo base_url(); ?>img/LOL1.jpg" alt="" class="imag img-fluid center-block"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td style="border-top: 0px !important; padding: 0px !important" scope="row"><img src="<?php echo base_url(); ?>img/mbappe.jpg" alt="" class="imag img-fluid center-block"></td>
+                          <td style="border-top: 0px !important; padding: 0px !important" scope="row"><img src="<?php echo base_url(); ?>img/fifa21.jpg" alt="" class="imag img-fluid center-block"></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+
         </div>
-        <br>
-        <div class="rank container-fluid">
-            <h2 class="h2" style="margin-bottom: 75px;">Ranking</h2>
-            <p class="fonts">Aqui veurem el millors jugadors al seu respectiu joc</p>
+        
+    </div>
+
+    <div class="rank container-fluid">
+        <div class="row">
+            <div class="col-12 center-block">
+                <h2 class="h2" style="margin-bottom: 75px;">Ranking</h2>
+                <p class="fonts">Aqui veurem el millors jugadors al seu respectiu joc</p>
+            </div>
+            
             <div class="col-md-6 col-sm-12 tablas tabla" style="margin-bottom:300px">
                 <div class="tabla center-block">
                     <p class="fonts1">LOL</p>
@@ -179,8 +211,10 @@
                 </div>
             </div>
         </div>
-        <div class="iconos">´
-            <h1 class="h2 marg mob" style="margin-bottom: 75px;">Una web de tornejos que pensa en tu</h1>
+    </div>
+        
+        <div class="iconos ">´
+            <h1 class="h2 marg mob text-center" style="margin-bottom: 75px;">Una web de tornejos que pensa en tu</h1>
             <div class="mid">
                 <div class="icn col-md-4 col-sm-12 centrar text-center">
                     <span>
@@ -220,8 +254,8 @@
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <meta name="viewport " content="width=device-width, initial-scale=1.0 ">
 </body>
 

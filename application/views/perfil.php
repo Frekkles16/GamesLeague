@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/css.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/perfil.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.css">
+    <script src="<?php echo base_url(); ?>js/perfil.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,17 +33,22 @@
     <main class="back">
         <section class="perfil col-md-2 col-sm-6">
             <div class="foto-perfil">
-                <img src="img/Logo_solo_Negro.png" alt="" srcset="" class="foto">
+                <img src="<?php echo base_url(); ?>img/Logo_solo_Negro.png" alt="" srcset="" class="foto">
             </div>
         </section>
         <section class="perfil col-md-10 col-sm-6">
             <div class="container p">
                 <div class="box perfil-padding">
-                    <p class="foto-perfil-p">Nom d'usuari</p>
-                    <br>
-                    <p class="foto-perfil-p">@idjuego</p>
-                    <br>
-                    <p class="foto-perfil-p">Cuando se creo la cuenta</p>
+                    <?php 
+                    foreach($mios->result_array() as $valor) 
+                    {
+                      
+                       echo '<p class="foto-perfil-p">' . $valor['Nom_Usuari'] . ' </p>';
+                       echo "<br>";
+                       
+                       echo '<p class="foto-perfil-p">' . $valor['Nom'] . ' </p>';
+                    }
+                     ?>
                 </div>
             </div>
         </section>
@@ -51,34 +57,31 @@
     <div class="perfil-body">
         <p class="fonts">Seleciona el joc per veure les teves estadístiques </p>
         <div class="select mx-auto" style="width:150px;">
-            <select>
+            <select onchange="cargar('<?php echo base_url(); ?>')" id="juego">
               <option value="0" class="">Selecciona:</option>
               <option value="1" class="">LOL</option>
               <option value="2" class="">FIFA</option>
             </select>
         </div>
     </div>
-    <div class="tabla mx-auto ">
-        <div class="col-md-4 col-sm-12 tablas-col">
+    <div class="tabla mx-auto row">
+        <div class="col-md-3 col-sm-12 tablas-col">
             Torneos jugados
-            <p class="mx-auto">65</p>
+            <p class="mx-auto" id="t_jugados">-</p>
         </div>
-        <div class="col-md-4 col-sm-12 tablas-col">
+        <div class="col-md-3 col-sm-12 tablas-col">
             Partidos jugados
-            <p class="mx-auto">65</p>
+            <p class="mx-auto" id="p_jugadas" >-</p>
         </div>
-        <div class="col-md-4 col-sm-12 tablas-col">
-            Victorias
-            <p class="mx-auto">65</p>
+        <div class="col-md-3 col-sm-12 tablas-col">
+            Torneijos Guanyats
+            <p class="mx-auto" id="torneos_w">-</p>
         </div>
-        <div class="col-md-6 col-sm-12 ">
-            Goles a favor
-            <p class="mx-auto">65</p>
+        <div class="col-md-3 col-sm-12 tablas-col">
+            Partides Guanyades
+            <p class="mx-auto" id="partidas_w">-</p>
         </div>
-        <div class="col-md-6 col-sm-12 ">
-            Goles en contra
-            <p class="mx-auto">65</p>
-        </div>
+
     </div>
     <footer class="bg-footer">
         <div class="bg-footer">

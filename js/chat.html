@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="chat.js"></script>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+    <h1>CHAT</h1>
+
+    <label for="">Mensaje</label>
+    <input type="text" id="mensaje">
+    <button onclick="mensajes()">Enviar</button>
+
+<div id="chatsuyo" class="chatsuyo"></div>
+
+<br>
+
+<div id="chatmio" class="chatmio"></div>
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyB702KAs1wwhpzI2vTDNm9NYQL1HdaYmZ0",
+    authDomain: "prueba-b6621.firebaseapp.com",
+    projectId: "prueba-b6621",
+    databaseURL: "https://prueba-b6621-default-rtdb.europe-west1.firebasedatabase.app/",
+    storageBucket: "prueba-b6621.appspot.com",
+    messagingSenderId: "685589540421",
+    appId: "1:685589540421:web:b36fc224487246bd493d2c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+    mostrarDatos();
+</script>
+</body>
+</html>

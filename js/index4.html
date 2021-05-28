@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <script src="act04.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+         
+    nav a{
+      text-decoration:none;
+      color:inherit;
+      font-size:14px;
+      }
+            
+    nav li{
+      display:inline-block;
+      width:150px;
+      height:30px;
+      padding:5px 10px;
+      background-color:#000;
+      border:1px solid #000;
+      text-align:center;
+      color:#fff;
+      position:relative;
+}
+            
+    nav li:hover{
+      background-color:#fff;
+      color:#000;
+      }
+            
+nav li>ul{
+      display:none;
+      }
+
+nav li:hover>ul{
+      display:block;
+      position:absolute;
+      top:30px;
+      left:0px;
+}
+    </style>
+</head>
+<body>
+    
+   <nav>
+       <ul id="nav">
+        
+        </ul>
+    </nav> 
+    
+    Nombre menu:
+    <input id="menu"   type="text">
+    <button onclick="añadirMenu()">Añadir menu</button>
+    Nombre submenu
+    <select id="sub_menu" name="sub_menu">
+        <option></option>
+    </select>
+    <input id="sub_menu_name"   type="text">
+    <button onclick="añadirSubMenu()">Añadir Submenu</button>
+    
+    
+
+
+</body>
+
+</html>
