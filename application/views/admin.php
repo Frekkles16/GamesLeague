@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMIN</title>
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/css.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/admin.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -42,7 +42,7 @@
             <div style="margin-top: 100px;" class="container">
                 <div class="box">
                     <h1 class="nombre">Crear torneig</h1>
-                    <select onchange="cargar('<?php echo base_url(); ?>')" id="juego">
+                    <select onchange="cargar('<?php echo site_url(); ?>')" id="juego">
                         <option value="0" class="">Selecciona:</option>
                         <option value="1" class="">LOL</option>
                         <option value="2" class="">FIFA</option>
@@ -98,7 +98,7 @@
                 <div class="box">
                     <h1 class="nombre">Modificar torneig</h1>
                     <h1 class="fonts">Selecciona el torneig</h1>
-                    <select onchange="cargar('<?php echo base_url(); ?>')" id="juego">
+                    <select onchange="cargar('<?php echo site_url(); ?>')" id="juego">
                         <option value="0" class="">Selecciona:</option>
                         <option value="1" class="">LOL</option>
                         <option value="2" class="">FIFA</option>
@@ -155,7 +155,7 @@
                     <div style="margin: 50px;">
                         <h1 class="nombre">Eliminar torneig</h1>
                         <h1 class="fonts">Selecciona el torneig</h1>
-                        <select onchange="cargar('<?php echo base_url(); ?>')" id="juego">
+                        <select onchange="cargar('<?php echo site_url(); ?>')" id="juego">
                             <option value="0" class="">Selecciona:</option>
                             <option value="1" class="">LOL</option>
                             <option value="2" class="">FIFA</option>
@@ -226,7 +226,7 @@
                     <div style="margin: 50px;">
                         <h1 class="nombre">Eliminar usuari</h1>
                         <h1 class="fonts">Selecciona el torneig</h1>
-                        <select onchange="cargar('<?php echo base_url(); ?>')" id="juego">
+                        <select onchange="cargar('<?php echo site_url(); ?>')" id="juego">
                             <option value="0" class="">Selecciona:</option>
                         </select>
                     </div>
