@@ -1,0 +1,17 @@
+
+let ranking = "lol";
+
+function load_ranking(link){
+    ranking = ranking === "fifa" ? "lol" : "fifa";
+    const url = ranking === "fifa" ? "rankingFIFA" : "rankingTorneos";
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+          document.getElementById("tabla").innerHTML = '<tr class="top_tabla"><th>Puesto</th><th>Nom usuari</th><th>Puntuación</th></tr>'  + this.responseText;
+          console.log(this.responseText);
+      }
+    };
+    http.open("GET", link + "php/" + url, true);
+    http.send(null);  
+
+}
