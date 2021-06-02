@@ -31,7 +31,7 @@ class torneig extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('inicio');
+		$this->load->view('admin');
 	}
 
 
@@ -119,5 +119,75 @@ class torneig extends CI_Controller {
 	    }
     }
 
+    public function torneig()
+    {
+    	$this->load->model('datos');
+    	$dades['mis_torneos'] = $this->datos->torneos_mios();
+
+    	$this->load->model('datos');
+    	$dades['torneos_all'] = $this->datos->torneos_all();
+
+    	$this->load->view('torneo', $dades);
+
+    }
+
+    public function miPartida($idTorneo)
+    {
+
+    	$this->load->model('datos');
+        $datos['partida'] = $this->datos->miPartida($idTorneo);
+        $datos2 = $datos['partida']->result_array();
+
+        $this->load->model('datos');
+        $datos['jugadors'] = $this->datos->JugadoresPartida($datos2[0]['Id_Partida']);
+        $datos['nPartida'] = $datos2[0]['Id_Partida'];
+        $this->load->view('partida', $datos);
+
+    }
+
+    public function archivoUp($idPartida) {
+        if($this->input->post() != null) {
+            if (empty($_FILES['arxiu']['name'])) {
+
+                $this->form_validation->set_rules('arxiu', 'Arxiu','required', ['required'=>'<span class="text-danger">No has seleccionado archivo</span>']);
+                
+                if ($this->form_validation->run() == false){
+                    // $this->load->view('subir');
+                }
+            } else{
+               $subir = array(
+                "tipusF" => $_FILES["arxiu"]["type"],
+                "fitxer" => addslashes(file_get_contents($_FILES["arxiu"]["tmp_name"])),
+                "id" => $idPartida
+            );
+               $this->load->model('datos'); 
+               $this->datos->archivoUp($subir);
+               $this->login();
+           }
+       	}else {
+        	$this->load->view('login');
+    	}
+    }
+
+    public function inscripcio($idTorneo)
+    {
+    	$this->load->model('datos');
+    	$datos['torneo'] = $this->datos->Torneo($idTorneo);
+    	$datos['jugadors'] = $this->datos->Jtorneo($idTorneo);
+    	$this->load->view('clasificacion', $datos);
+    }
+
+
+  //   public function crearTorneo()
+  //   {
+  //   	$datos=$this->input->post(); 
+
+  //   	$this->load->model('datos');
+  //       $this->datos->crearTorneo($datos);
+		// echo "<script>alert('Torneo insertado correctamente!.');</script>";
+
+		// $this->login();
+
+  //   }
 
 }

@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAMESLEAGUE</title>
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="stylesheet" href="css/clasificacion.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/css.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/clasificacion.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
@@ -22,8 +22,8 @@
 
 <body>
     <!--DE AQUI-->
-    <header class="bg-header">
-        <nav class="bg-header">
+    <header >
+        <nav >
 
         </nav>
     </header>
@@ -52,30 +52,23 @@
     </section>
     <h1 class="mx-auto" style="text-align: center; color: white;">Cuartos de final</h1>
     <div class="cuadro r">
-        <div class="col-md-6 col-sm-6 col-6 m mx-auto md" style="padding: 40px; display: inline-flex; margin-right: 30px;">
-            <p style="color: white;"></p>
-            <hr color="white" style="margin-right: 10px;" width="100px">
-            <hr color="white" width="100px">
-        </div>
-        <br> 
-        <div class="col-md-6 col-sm-6 col-6 m mx-auto md" style="padding: 40px; display: inline-flex; margin-right: 30px;">
-            <p style="color: white;"></p>
-            <hr color="white" style="margin-right: 10px;" width="100px">
-            <hr color="white" width="100px">
-        </div>
+
+        <?php 
+
+        $cont = 0;
+        for ($i = 0; $i < 4; $i++){ ?>
+            <div class="col-md-6 col-sm-6 col-6 m mx-auto md" style="padding: 40px; display: inline-flex; margin-right: 30px;">
+            <?php for ($j = 0; $j < 2; $j++){ ?>
+                <?php $a =  $jugadors->result_array()  ?>
+                    <p style="color: white;"> <?php echo $a[$cont]['Nom_Usuari'] ?></p>
+                    <hr color="white" style="margin-right: 10px;" width="100px">
+            <?php $cont++; } ?>
+            </div>
+        <?php } ?>
+
     </div>
-    <div class="cuadro r">
-        <div class="col-md-6 col-sm-6 col-6 m mx-auto md" style="padding: 40px; display: inline-flex; margin-right: 30px;">
-            <p style="color: white;"></p>
-            <hr color="white" style="margin-right: 10px;" width="100px">
-            <hr color="white" width="100px">
-        </div>
-        <div class="col-md-6 col-sm-6 col-6 m mx-auto md" style="padding: 40px; display: inline-flex; margin-right: 30px;">
-            <p style="color: white;"></p>
-            <hr color="white" style="margin-right: 20px;" width="100px">
-            <hr color="white" width="100px">
-        </div>
-    </div>
+
+    <?php echo "hola" ?>
     <h1 class="mx-auto" style="text-align: center; color: white; margin-left: 50px;">Semifinal</h1>
     <div class="row cuadro ">
         <div class="col-md-6 col-sm-6 col-6 cuadro mx-auto" style="display: inline-flex;margin: 0 auto;">

@@ -26,7 +26,7 @@ parent::__construct();
     }
 
     public function archivoUp($datos){
-        $sql='INSERT INTO fitxers(nomF, tipusF, data, contingut, codiU) VALUES ("'.$datos["nomF"].'","'.$datos["tipusF"].'","'.date("y/m/d").'","'.$datos["fitxer"].'","'.$datos["codiU"].'")';
+        $sql='UPDATE partida SET `TipusF` = "' . $datos["tipusF"] . '", `Fitxer` = "' . $datos["fitxer"] . '" WHERE `Id_Partida` = ' .$datos["id"];
         $this->db->query($sql);
         $filas=$this->db->affected_rows();
         return $filas;
@@ -56,6 +56,51 @@ parent::__construct();
 
         return $this->db->get_where('usuari', array('Nom_Usuari' => $_SESSION["user"]));
     }
+
+    public function torneos_mios() {
+        $id = $_SESSION["id"];
+        $sql='SELECT `torneig`.*, `videojoc`.`Nom_Videojoc` FROM `torneig` INNER JOIN `pa_to_us` ON `pa_to_us`.`Id_Torneig` = `torneig`.`Id_Torneig` INNER JOIN `videojoc` ON `torneig`.`Id_Videojoc` = `videojoc`.`Id_Videojoc` WHERE `pa_to_us`.`Id_Usuari` = '. $id . ' GROUP BY `torneig`.`Id_Torneig`';
+        return $this->db->query($sql);
+    }
+
+    public function torneos_all() {
+        $id = $_SESSION["id"];
+        $sql='SELECT `torneig`.*, `videojoc`.`Nom_Videojoc` FROM `torneig` INNER JOIN `pa_to_us` ON `pa_to_us`.`Id_Torneig` = `torneig`.`Id_Torneig` INNER JOIN `videojoc` ON `torneig`.`Id_Videojoc` = `videojoc`.`Id_Videojoc` WHERE `pa_to_us`.`Id_Usuari` != '. $id . ' GROUP BY `torneig`.`Id_Torneig`';
+        return $this->db->query($sql);
+    }
+
+    public function miPartida($id_torneo)
+    {
+        $id = $_SESSION["id"];
+        $sql='SELECT `partida`.*, `torneig`.* FROM `partida` INNER JOIN `pa_to_us` ON `pa_to_us`.`Id_Partida` = `partida`.`Id_Partida` INNER JOIN `torneig` ON `pa_to_us`.`Id_Torneig` = `torneig`.`Id_Torneig` WHERE `pa_to_us`.`Id_Torneig` ='. $id_torneo .' AND `pa_to_us`.`Id_Usuari`='. $id;
+        return $this->db->query($sql);
+    }
+
+    public function JugadoresPartida($id_partida)
+    {
+        $sql='SELECT `usuari`.* FROM `pa_to_us` INNER JOIN `usuari` ON `pa_to_us`.`Id_Usuari` = `usuari`.`Id_Usuari` WHERE `pa_to_us`.`Id_Partida` = 1';
+        return $this->db->query($sql);
+    }
+
+    public function Torneo($torneo)
+    {
+        $sql='SELECT * FROM `torneig` WHERE `Id_Torneig` = '. $torneo;
+        return $this->db->query($sql);
+    }
+
+    public function Jtorneo($torneo)
+    {
+        $sql='SELECT `usuari`.`Nom_Usuari`FROM `pa_to_us` LEFT JOIN `usuari` ON `pa_to_us`.`Id_Usuari`= `usuari`.`Id_Usuari`LEFT JOIN `partida` ON `partida`.`Id_Partida` = `pa_to_us`.`Id_Partida` WHERE `pa_to_us`.`Id_Torneig` = '. $torneo . ' ORDER BY `pa_to_us`.`Id_Partida`';
+        return $this->db->query($sql);
+    }
+
+    // public function crearTorneo($datos)
+    // {
+    //     $sql='INSERT INTO torneig(Nom, Data, Capacitat, N_Partides, Id_Admin, Id_Videojoc) VALUES ("'.$datos["nom"].'","'.$datos["data"].'", 8, 7, 1, "'.$datos["juego"].'")';
+    //     $this->db->query($sql);
+    //     $filas=$this->db->affected_rows();
+    //     return $filas;
+    // }
     
     public function compartirArchivo($Compartir) {
         $sql='INSERT INTO compartir(codiF, codiUC) VALUES ("'.$Compartir["fitxerCompartir"].'","'.$Compartir["usuariCompartir"].'")';

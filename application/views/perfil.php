@@ -24,12 +24,29 @@
 
 <body>
     <!--DE AQUI-->
-    <header class="bg-header">
-        <nav class="bg-header-">
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light navbar-dark">
+          <a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>img/Logo_solo_Naranja.png" alt="" class="games"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav ml-auto ">
+              <li class="nav-item active">
+                <a class="nav-link  fonts " href="<?php echo site_url('torneig/torneig')?>">Torneijos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  fonts" href="<?php echo site_url('torneig/ranking') ?>">Ranking</a>
+              </li>
+            </ul>
+          </div>
 
         </nav>
     </header>
     <!--HASTA AQUI-->
+
     <main class="back">
         <section class="perfil col-md-2 col-sm-6">
             <div class="foto-perfil">

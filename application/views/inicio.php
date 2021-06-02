@@ -22,36 +22,6 @@
 
 <body>
     <header>
-        <!-- <nav class="bg-header">
-            
-            <div class="boto">
-                <button class="btn btn-warning boton fonts">Inicia sessió</button>
-                <button class="btn btn-warning boton fonts">Registrarse</button>
-            </div>
-        </nav> -->
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand nombre" href="#"><img src="<?php echo base_url(); ?>img/Logo_solo_Naranja.png" alt="" class="games"></a>
-            <div class="collapse navbar-collapse justify-content-end menu" id="navbarNav">
-                <ul class="navbar-nav ">
-
-                    <li class="nav-item">
-                        <a class="nav-link boton fonts" href="<?php echo site_url('torneig/login')?>">Inicia sessió</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link boton fonts" href="<?php echo site_url('torneig/registro') ?>">Registrarse</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="pos-f-t">
-                <nav class="navbar navbar-dark bg-dark">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                </nav>
-            </div>
-        </nav> -->
-
         <nav class="navbar navbar-expand-lg navbar-light navbar-dark">
           <a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>img/Logo_solo_Naranja.png" alt="" class="games"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,14 +38,13 @@
             </ul>
           </div>
         </nav>
-
     </header>
 
 
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-sm-12 text-center">
+            <div class="col-md-6 col-sm-12 Logo_texto_Naranja">
                 <img src="<?php echo base_url(); ?>img/Logo_texto_Naranja.png" alt="" class="imgrande">
                 <h1 class="fonts size">Juga tornejos i guanya punts els tornejos més competitius.</h1>
             </div>
