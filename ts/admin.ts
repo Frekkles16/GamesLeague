@@ -73,3 +73,20 @@ function eliminarTorneo(link)
     http.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
     http.send("id=" + document.getElementById('torneos_eliminar').value);
 }
+
+function crearAdmin(link)
+{
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("user").value = '';
+        document.getElementById("passw").value  = '';
+        document.getElementById("passw2").value  = '';
+        alert("Administrador creat correctament");
+
+      }
+    };
+    http.open("POST", link + "php/crearAdmin.php", true);
+    http.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    http.send("user=" + document.getElementById("user").value + "&passw=" + document.getElementById("passw").value);
+}

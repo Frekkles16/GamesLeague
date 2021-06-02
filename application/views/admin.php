@@ -157,7 +157,7 @@
                             </div>
                         </div>
                         <div class="m-0 row justify-content-center boto">
-                            <button class="btn mx-auto btn-warning boton fonts">Crear usuari</button>
+                            <button class="btn mx-auto btn-warning boton fonts" onclick="crearAdmin('<?php echo base_url(); ?>')">Crear usuari</button>
                         </div>
                     </form>
                 </div>
@@ -169,7 +169,7 @@
                     <div style="margin: 50px;">
                         <h1 class="nombre">Eliminar usuari</h1>
                         <h1 class="fonts">Selecciona el torneig</h1>
-                        <select onchange="cargar('<?php echo base_url(); ; ?>')" id="">
+                        <select onchange="cargar('<?php echo base_url(); ?>')" id="">
                             <option value="0" class="">Selecciona:</option>
                         </select>
                     </div>
