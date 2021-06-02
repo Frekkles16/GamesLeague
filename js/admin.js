@@ -4,7 +4,7 @@ function crearTorneo(link) {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("nom").value = '';
             document.getElementById("data").value = '';
-            alert("Torneig insertt correctament");
+            alert("Torneig insertat correctament");
         }
     };
     http.open("POST", link + "php/crearTorneo.php", true);
@@ -15,10 +15,46 @@ function cargar_update(link) {
     var http = new XMLHttpRequest();
     http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("torneos").innerHTML = this.responseText;
+            var text = '<option value="0" class="">Selecciona:</option>' + this.responseText;
+            document.getElementById("torneos").innerHTML = text;
         }
     };
-    alert("aaa");
     http.open("GET", link + "php/selectTorneos.php", true);
     http.send(null);
+}
+function datos_update(link) {
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var text = this.responseText.split(',');
+            document.getElementById('u_nom').value = text[0];
+            document.getElementById('u_data').value = text[1];
+            document.getElementById('u_juego').value = text[2];
+        }
+    };
+    http.open("POST", link + "php/datosTorneo.php", true);
+    http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    http.send("id=" + document.getElementById('torneos').value);
+}
+function cargar_eliminar(link) {
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var text = '<option value="0" class="">Selecciona:</option>' + this.responseText;
+            document.getElementById("torneos_eliminar").innerHTML = text;
+        }
+    };
+    http.open("GET", link + "php/selectTorneos.php", true);
+    http.send(null);
+}
+function eliminarTorneo(link) {
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("Torneig eliminat correctament");
+        }
+    };
+    http.open("POST", link + "php/deleteTorneo.php", true);
+    http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    http.send("id=" + document.getElementById('torneos_eliminar').value);
 }

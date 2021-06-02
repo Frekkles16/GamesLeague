@@ -80,7 +80,7 @@
                     
                     <form>
                         <h1 class="fonts">Selecciona el torneig a modificar</h1>
-                        <select onchange="cargar_update(<?php echo base_url(); ?>)" id="torneos">
+                        <select onchange="datos_update('<?php echo base_url(); ?>')" id="torneos">
                             <option value="" class="">Selecciona:</option>
                         </select>
                         <br><br><br>    
@@ -117,14 +117,12 @@
                     <div style="margin: 50px;">
                         <h1 class="nombre">Eliminar torneig</h1>
                         <h1 class="fonts">Selecciona el torneig</h1>
-                        <select onchange="cargar(<?php echo base_url(); ?>)" id="">
+                        <select id="torneos_eliminar">
                             <option value="0" class="">Selecciona:</option>
-                            <option value="1" class="">LOL</option>
-                            <option value="2" class="">FIFA</option>
                         </select>
                     </div>
                     <div class="m-0 row justify-content-center boto">
-                        <button class="btn mx-auto btn-warning boton fonts" onclick="eliminarTorneo(<?php echo base_url(); ?>)">Eliminar torneig</button>
+                        <button class="btn mx-auto btn-warning boton fonts" onclick="eliminarTorneo('<?php echo base_url(); ?>')">Eliminar torneig</button>
                     </div>
                 </div>
             </div>
@@ -138,41 +136,24 @@
                             <span class="icn col-md-12 col-sm-12 text-center lock">
                                 <i class="fas fa-lock fa-9x fa-align-center"></i>
                             </span>
-                            <div class="col-md-6 col-sm-12 form_group">
-                                <span class="icn text-center lock">
-                                    <i class="fas fa-user fa-2x fa-align-center"></i>
-                                </span>
-                                <input class="in" type="text" name="" placeholder="Nom" style="color: white;">
-                            </div>
-                            <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
-                                    <i class="fas fa-at fa-2x fa-align-center"></i>
-                                </span>
-                                <input class="in" type="email" name="" placeholder="Email" style="color: white;">
-                            </div>
-                            <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
-                                    <i class="fas fa-calendar-minus fa-2x fa-align-center"></i>
-                                </span>
-                                <input class="in" type="date" name="" placeholder="" style="color: white;" class="">
-                            </div>
-                            <div class="col-md-6 col-sm-12 ">
+                            
+                            <div class="col-md-12 col-sm-12 ">
                                 <span class="icn text-center lock">
                                     <i class="fas fa-user-shield fa-2x fa-align-center"></i>
                                 </span>
-                                <input class="in" type="text" name="" placeholder="Nom d'usuari" style="color: white;">
+                                <input class="in" type="text" name="" id="user" placeholder="Nom d'usuari" style="color: white;">
                             </div>
                             <div class="col-md-6 col-sm-12 ">
                                 <span class="icn text-center lock">
                                     <i class="fas fa-key fa-2x fa-align-center"></i>
                                 </span>
-                                <input class="in" type="password" name="" placeholder="Contrasenya" style="color: white;">
+                                <input class="in" type="password" id="passw" placeholder="Contrasenya" style="color: white;">
                             </div>
                             <div class="col-md-6 col-sm-12 ">
                                 <span class="icn text-center lock">
                                     <i class="fas fa-key fa-2x fa-align-center"></i>
                                 </span>
-                                <input class="in" type="password" name="" placeholder="Comprovar contrasenya" style="color: white;">
+                                <input class="in" type="password" id="passw2" placeholder="Comprovar contrasenya" style="color: white;">
                             </div>
                         </div>
                         <div class="m-0 row justify-content-center boto">
@@ -188,7 +169,7 @@
                     <div style="margin: 50px;">
                         <h1 class="nombre">Eliminar usuari</h1>
                         <h1 class="fonts">Selecciona el torneig</h1>
-                        <select onchange="cargar('<?php echo site_url(); ?>')" id="">
+                        <select onchange="cargar('<?php echo base_url(); ; ?>')" id="">
                             <option value="0" class="">Selecciona:</option>
                         </select>
                     </div>
@@ -200,7 +181,8 @@
         </section>
     </main>
     <script>
-        cargar_update('<?php echo site_url(); ?>');
+        cargar_update('<?php echo base_url(); ?>');
+        cargar_eliminar('<?php echo base_url(); ?>');
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
