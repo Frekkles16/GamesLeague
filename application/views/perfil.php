@@ -24,6 +24,7 @@
 </head>
 
 <body>
+    <!--DE AQUI-->
     <header class="">
         <nav class="bg-header">
             <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
@@ -38,6 +39,7 @@
             </div>
         </nav>
     </header>
+    <!--HASTA AQUI-->
 
     <main class="back">
         <section class="perfil col-md-2 col-sm-6">
