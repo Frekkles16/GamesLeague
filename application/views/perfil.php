@@ -8,6 +8,7 @@
     <title>GAMESLEAGUE</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/css.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/perfil.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/admin.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.css">
     <script src="<?php echo base_url(); ?>js/perfil.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -24,25 +25,19 @@
 
 <body>
     <!--DE AQUI-->
-    <header>
-
-        <nav class="navbar navbar-expand-lg navbar-light navbar-dark">
-          <a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>img/Logo_solo_Naranja.png" alt="" class="games"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav ml-auto ">
-              <li class="nav-item active">
-                <a class="nav-link  fonts " href="<?php echo site_url('torneig/torneig')?>">Tornejos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link  fonts" href="<?php echo site_url('torneig/ranking') ?>">Ranking</a>
-              </li>
-            </ul>
-          </div>
-
+    <header class="">
+        <nav class="bg-header">
+            <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+            <label for="abrir-cerrar">&#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span></label>
+            <div id="sidebar" class="sidebar">
+                <ul class="menu">
+                    <li><a href="<?php echo site_url('torneig/perfil')?>">El teu perfil</a></li>
+                    <li><a href="<?php echo site_url('torneig/ranking') ?>">Ranking</a></li>
+                    <li><a href="<?php echo site_url('torneig/torneig')?>">Tornejos</a></li>
+                    <li><a href="#" style="color: red;">Logout</a></li>
+                    <li><a href="#eliminarusu">Eliminar torneig</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <!--HASTA AQUI-->
@@ -83,15 +78,15 @@
     </div>
     <div class="tabla mx-auto row">
         <div class="col-md-3 col-sm-12 tablas-col">
-            Torneos jugados
+            Tornejos jugats
             <p class="mx-auto" id="t_jugados">-</p>
         </div>
         <div class="col-md-3 col-sm-12 tablas-col">
-            Partidos jugados
+            Partides jugades
             <p class="mx-auto" id="p_jugadas" >-</p>
         </div>
         <div class="col-md-3 col-sm-12 tablas-col">
-            Torneijos Guanyats
+            Tornejos Guanyats
             <p class="mx-auto" id="torneos_w">-</p>
         </div>
         <div class="col-md-3 col-sm-12 tablas-col">
@@ -104,13 +99,13 @@
         <div class="bg-footer">
             <hr color="#FF5E00 " style="margin-top: 300px; " size="0.5px ">
             <div class="col-md-3 col-sm-12 ">
-                <p class="pfoot ">LA MEJOR WEB DE TORNEOS PARA COMPETIR</p>
+                <p class="pfoot ">LA MILLOR WEB DE TORNEJOS PER COMPETIR</p>
             </div>
             <div class="col-md-3 col-sm-12 ">
-                <p class="fontf ">Privacidad</p>
+                <p class="fontf ">Privacitat</p>
             </div>
             <div class="col-md-3 col-sm-12 ">
-                <p class="fontf ">Condiciones</p>
+                <p class="fontf ">Condicions</p>
             </div>
             <div class="col-md-3 col-sm-12 ">
                 <p class="copy">Copyright 2021 GAMESLEAGUE</p>
