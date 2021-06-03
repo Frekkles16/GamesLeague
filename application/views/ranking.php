@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/css.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/ranking.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/admin.css">
     <script src="<?php echo base_url(); ?>js/ranking.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -22,9 +23,19 @@
 </head>
 
 <body>
-    <header class="bg-header">
-        <nav class="bg-header">
-
+<header class="">
+        <nav class="">
+            <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+            <label for="abrir-cerrar">&#9776; <span class="abrir">Obrir</span><span class="cerrar">Tancar</span></label>
+            <div id="sidebar" class="sidebar">
+                <ul class="menu">
+                    <li><a href="<?php echo site_url('torneig/perfil')?>">El teu perfil</a></li>
+                    <li><a href="#modificar">Modificar torneig</a></li>
+                    <li><a href="#eliminar">Eliminar torneig</a></li>
+                    <li><a href="#usuario">Crear usuari administrador</a></li>
+                    <li><a href="#eliminarusu">Eliminar torneig</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -181,9 +192,11 @@
             </div>
         </div>
     </main>
+
+    <script>
+        load_ranking('<?php echo base_url(); ?>')</script>;
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
     <meta name="viewport " content="width=device-width, initial-scale=1.0 ">
 </body>
-<script
 </html>

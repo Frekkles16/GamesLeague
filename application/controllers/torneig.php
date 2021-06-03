@@ -31,7 +31,7 @@ class torneig extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('admin');
+		$this->load->view('inicio');
 	}
 
 
@@ -112,9 +112,7 @@ class torneig extends CI_Controller {
 	        }
 	    }else
 	    {
-	    	$this->load->model('datos');
-            $datos['mios'] = $this->datos->mios();
-            $this->load->view('perfil', $datos);
+	    	$this->perfil();
 
 	    }
     }
@@ -129,6 +127,12 @@ class torneig extends CI_Controller {
 
     	$this->load->view('torneo', $dades);
 
+    }
+    public function perfil(){
+        
+        $this->load->model('datos');
+        $datos['mios'] = $this->datos->mios();
+        $this->load->view('perfil', $datos);
     }
 
     public function miPartida($idTorneo)
