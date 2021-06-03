@@ -90,20 +90,42 @@ class torneig extends CI_Controller {
 	                $this->load->view('login',$datos);
 	            }
 	            else{
-	                $this->load->model('Inicio');
-	                $rows = $this->Inicio->iniciarSesion($datos);
-	                if($rows > 0) {
-	                	$_SESSION["user"] = $datos["user"];
+	            	$this->load->model('Inicio');
+	                $rows = $this->Inicio->iniciarSesionAd($datos);
 
-	                	$this->load->model('datos');
-	                    $datos['mios'] = $this->datos->mios();
-	                    $this->load->view('perfil', $datos);
-	                    $datos2 = $datos['mios']->result_array();
-	                    $_SESSION["id"] = $datos2[0]['Id_Usuari'];
+	            	if ($rows > 0 ) {
+	            		$_SESSION['user'] = $datos["user"];
 
-	                } else {
-	                    $this->load->view('login');
-	                }
+	            		$this->load->model('datos');
+	            		$datos['admin'] = $this->datos->admin();
+
+
+		                $datosAdmin = $datos['admin']->result_array();
+
+		                $_SESSION["id"] = $datosAdmin[0]['Id_Admin'];
+		                $_SESSION["tipus"] = 'admin';
+	            		$this->load->view('admin');
+	            		
+	            	}else
+	            	{
+		            	$this->load->model('Inicio');
+		                $rows = $this->Inicio->iniciarSesion($datos);
+
+		                if($rows > 0) {
+		                	$_SESSION["user"] = $datos["user"];
+
+		                	$this->load->model('datos');
+		                    $datos['mios'] = $this->datos->mios();
+		                    $this->load->view('perfil', $datos);
+		                    $datos2 = $datos['mios']->result_array();
+		                    $_SESSION["id"] = $datos2[0]['Id_Usuari'];
+		                    $_SESSION["tipus"] = 'user';
+
+		                } else {
+		                    $this->load->view('login');
+		                }
+	            	}
+	                
 	                
 	            }
 	            
@@ -113,7 +135,6 @@ class torneig extends CI_Controller {
 	    }else
 	    {
 	    	$this->perfil();
-
 
 	    }
     }
@@ -136,12 +157,6 @@ class torneig extends CI_Controller {
         $this->load->view('perfil', $datos);
     }
 
-    public function ranking(){
-    
-        $this->load->model('datos');
-        $datos['mios'] = $this->datos->mios();
-        $this->load->view('ranking', $datos);
-    }
     public function miPartida($idTorneo)
     {
 
@@ -187,6 +202,7 @@ class torneig extends CI_Controller {
     	$datos['jugadors'] = $this->datos->Jtorneo($idTorneo);
     	$this->load->view('clasificacion', $datos);
     }
+
     public function delete()
     {
     	$this->load->model('datos');
@@ -207,17 +223,11 @@ class torneig extends CI_Controller {
     	$this->load->view('inicio');
     }
 
-
-  //   public function crearTorneo()
-  //   {
-  //   	$datos=$this->input->post(); 
-
-  //   	$this->load->model('datos');
-  //       $this->datos->crearTorneo($datos);
-		// echo "<script>alert('Torneo insertado correctamente!.');</script>";
-
-		// $this->login();
-
-  //   }
+public function ranking(){
+    
+        $this->load->model('datos');
+        $datos['mios'] = $this->datos->mios();
+        $this->load->view('ranking', $datos);
+    }
 
 }
