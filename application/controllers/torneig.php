@@ -31,7 +31,7 @@ class torneig extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('inicio');
+		$this->load->view('inicionew');
 	}
 
 
@@ -202,6 +202,17 @@ class torneig extends CI_Controller {
     	$datos['jugadors'] = $this->datos->Jtorneo($idTorneo);
     	$this->load->view('clasificacion', $datos);
     }
+
+    public function inscribir()
+    {
+    	$datos=$this->input->post();
+    	$this->load->model('datos');
+        $row = $this->datos->inscribir($datos);
+        echo '<script> alert("Inscrit correctament"); </script>';
+        $this->torneig();
+           
+    }
+
 
     public function delete()
     {

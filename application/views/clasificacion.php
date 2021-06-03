@@ -37,6 +37,76 @@
             </div>
         </nav>
     </header>
+    <h1 class="mx-auto" style="text-align: center; color: white;">Cuartos de final</h1>
+    <div class="cuadro r">
+
+        <?php 
+
+        $cont = 0;
+        for ($i = 0; $i < 4; $i++){ ?>
+            <div class="col-md-6 col-sm-6 col-6 m mx-auto md" style="padding: 40px; display: inline-flex; margin-right: 30px;">
+            <?php for ($j = 0; $j < 2; $j++){ ?>
+                <?php $a =  $jugadors->result_array() ?>
+                <div class="col-6 text-center">
+                    <p style="color: white;"> <?php 
+                    if ($a[$cont]['Nom_Usuari'] == '') {
+                        echo "<form method='POST' action='" . site_url('torneig/inscribir') ."'>
+                            <input type='hidden' name='idPa' value='" . $a[$cont]['Id_Pa_To_Us'] . "' >
+                            <button>Inscribirme</button>
+                        </form>";
+                    }else
+                    {
+                        echo $a[$cont]['Nom_Usuari'];
+                    }
+        ?>
+                        
+                    </p>
+                       
+                </div>
+                    
+            <?php $cont++; } ?>
+            </div>
+        <?php } ?>
+
+    </div>
+
+    <h1 class="mx-auto" style="text-align: center; color: white; margin-left: 50px;">Semifinal</h1>
+    <div class="row cuadro mx-auto ">
+        <div class="col-md-6 col-sm-6 col-6 cuadro mx-auto" style="display: inline-flex;margin: 0 auto;">
+            <div class="col-md-6 col-sm-6 m mx-auto" style="padding: 40px; display: inline-flex; margin-right: 30px;">
+                <p style="color: white;"></p>
+                <hr color="white" style="margin-right: 20px;" width="100px">
+                <hr color="white" width="100px">
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-6 cuadro mx-auto" style="display: inline-flex;margin: 0 auto;">
+            <div class="col-md-6 col-sm-6 m mx-auto" style="padding: 40px; display: inline-flex; margin-right: 30px;">
+                <p style="color: white;"></p>
+                <hr color="white" style="margin-right: 20px;" width="100px">
+                <hr color="white" width="100px">
+            </div>
+        </div>
+    </div>
+    <h1 class="mx-auto" style="text-align: center; color: white;">Final</h1>
+    <div class="row cuadro mx-auto">
+        <div class="col-md-6 col-sm-6 col-6 cuadro mx-auto" style="display: inline-flex;margin: auto;">
+            <div class="col-md-6 col-sm-6 m mx-auto" style="padding: 40px; display: inline-flex; margin-right: 30px;">
+                <p style="color: white;"></p>
+                <hr color="white" style="margin-right: 20px;" width="100px">
+                <hr color="white" width="100px">
+            </div>
+        </div>
+    </div>
+    <h1 class="mx-auto" style="text-align: center; color: white;">Ganador</h1>
+    <div class="row mx-auto">
+        <div class="col-md-6 col-sm-6 col-6 mx-auto" style="display: inline-flex;margin: auto;">
+            <div class="col-md-6 col-sm-6 m mx-auto" style="padding: 40px; display: inline-flex; margin-right: 30px;">
+                <p style="color: white;"></p>
+                <hr color="white" style="margin-right: 20px;" width="100px">
+                <hr color="white" width="100px">
+            </div>
+        </div>
+    </div>
     <section class="col-md-12 col-sm-12 bg-reglas">
         <h1 class="fonts fonts1">
             Reglas de torneig
@@ -60,62 +130,6 @@
             Si el partit finalitza amb empat, s'hauria de jugar la prorroga, si després els 30 minuts extres segueix l'empat arribaríem a penals
         </p>
     </section>
-    <h1 class="mx-auto" style="text-align: center; color: white;">Cuartos de final</h1>
-    <div class="cuadro r">
-
-        <?php 
-
-        $cont = 0;
-        for ($i = 0; $i < 4; $i++){ ?>
-            <div class="col-md-6 col-sm-6 col-6 m mx-auto md" style="padding: 40px; display: inline-flex; margin-right: 30px;">
-            <?php for ($j = 0; $j < 2; $j++){ ?>
-                <?php $a =  $jugadors->result_array()  ?>
-                    <p style="color: white;"> <?php echo $a[$cont]['Nom_Usuari'] ?></p>
-                    <hr color="white" style="margin-right: 10px;" width="100px">
-            <?php $cont++; } ?>
-            </div>
-        <?php } ?>
-
-    </div>
-
-    <?php echo "hola" ?>
-    <h1 class="mx-auto" style="text-align: center; color: white; margin-left: 50px;">Semifinal</h1>
-    <div class="row cuadro ">
-        <div class="col-md-6 col-sm-6 col-6 cuadro mx-auto" style="display: inline-flex;margin: 0 auto;">
-            <div class="col-md-6 col-sm-6 m mx-auto" style="padding: 40px; display: inline-flex; margin-right: 30px;">
-                <p style="color: white;"></p>
-                <hr color="white" style="margin-right: 20px;" width="100px">
-                <hr color="white" width="100px">
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-6 col-6 cuadro mx-auto" style="display: inline-flex;margin: 0 auto;">
-            <div class="col-md-6 col-sm-6 m mx-auto" style="padding: 40px; display: inline-flex; margin-right: 30px;">
-                <p style="color: white;"></p>
-                <hr color="white" style="margin-right: 20px;" width="100px">
-                <hr color="white" width="100px">
-            </div>
-        </div>
-    </div>
-    <h1 class="mx-auto" style="text-align: center; color: white;">Final</h1>
-    <div class="row cuadro">
-        <div class="col-md-6 col-sm-6 col-6 cuadro mx-auto" style="display: inline-flex;margin: 0 auto;">
-            <div class="col-md-6 col-sm-6 m mx-auto" style="padding: 40px; display: inline-flex; margin-right: 30px;">
-                <p style="color: white;"></p>
-                <hr color="white" style="margin-right: 20px;" width="100px">
-                <hr color="white" width="100px">
-            </div>
-        </div>
-    </div>
-    <h1 class="mx-auto" style="text-align: center; color: white;">Ganador</h1>
-    <div class="row cuadro">
-        <div class="col-md-6 col-sm-6 col-6 cuadro mx-auto" style="display: inline-flex;margin: 0 auto;">
-            <div class="col-md-6 col-sm-6 m mx-auto" style="padding: 40px; display: inline-flex; margin-right: 30px;">
-                <p style="color: white;"></p>
-                <hr color="white" style="margin-right: 20px;" width="100px">
-                <hr color="white" width="100px">
-            </div>
-        </div>
-    </div>
     <footer class="bg-footer">
         <div class="bg-footer">
             <hr color="#FF5E00" style="margin-top: 300px; " size="0.5px ">
@@ -133,6 +147,10 @@
             </div>
         </div>
     </footer>
+    <form method='POST' action="<?php echo site_url('torneig/inscribir') ?>">
+        <input type='hidden' name='idPa' value='<?php echo $a[$cont]["Id_Pa_To_Us"]; ?>'>
+        <button>I</button>
+    </form>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
     <meta name="viewport " content="width=device-width, initial-scale=1.0 ">

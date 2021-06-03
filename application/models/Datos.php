@@ -76,7 +76,7 @@ parent::__construct();
 
     public function torneos_all() {
         $id = $_SESSION["id"];
-        $sql='SELECT `torneig`.*, `videojoc`.`Nom_Videojoc` FROM `torneig` INNER JOIN `pa_to_us` ON `pa_to_us`.`Id_Torneig` = `torneig`.`Id_Torneig` INNER JOIN `videojoc` ON `torneig`.`Id_Videojoc` = `videojoc`.`Id_Videojoc` WHERE `pa_to_us`.`Id_Usuari` != '. $id . ' GROUP BY `torneig`.`Id_Torneig`';
+        $sql='SELECT `torneig`.*, `videojoc`.`Nom_Videojoc` FROM `torneig` INNER JOIN `pa_to_us` ON `pa_to_us`.`Id_Torneig` = `torneig`.`Id_Torneig` INNER JOIN `videojoc` ON `torneig`.`Id_Videojoc` = `videojoc`.`Id_Videojoc` GROUP BY `torneig`.`Id_Torneig`';
         return $this->db->query($sql);
     }
 
@@ -89,7 +89,7 @@ parent::__construct();
 
     public function JugadoresPartida($id_partida)
     {
-        $sql='SELECT `usuari`.* FROM `pa_to_us` INNER JOIN `usuari` ON `pa_to_us`.`Id_Usuari` = `usuari`.`Id_Usuari` WHERE `pa_to_us`.`Id_Partida` = 1';
+        $sql='SELECT `pa_to_us`.Id_Pa_To_Us, `usuari`.* FROM `pa_to_us` INNER JOIN `usuari` ON `pa_to_us`.`Id_Usuari` = `usuari`.`Id_Usuari` WHERE `pa_to_us`.`Id_Partida` = '. $id_partida;
         return $this->db->query($sql);
     }
 
@@ -101,7 +101,7 @@ parent::__construct();
 
     public function Jtorneo($torneo)
     {
-        $sql='SELECT `usuari`.`Nom_Usuari`FROM `pa_to_us` LEFT JOIN `usuari` ON `pa_to_us`.`Id_Usuari`= `usuari`.`Id_Usuari`LEFT JOIN `partida` ON `partida`.`Id_Partida` = `pa_to_us`.`Id_Partida` WHERE `pa_to_us`.`Id_Torneig` = '. $torneo . ' ORDER BY `pa_to_us`.`Id_Partida`';
+        $sql='SELECT  `pa_to_us`.`Id_Pa_To_Us`, `usuari`.`Nom_Usuari`FROM `pa_to_us` LEFT JOIN `usuari` ON `pa_to_us`.`Id_Usuari`= `usuari`.`Id_Usuari`LEFT JOIN `partida` ON `partida`.`Id_Partida` = `pa_to_us`.`Id_Partida` WHERE `pa_to_us`.`Id_Torneig` = '. $torneo . ' ORDER BY `pa_to_us`.`Id_Partida`';
         return $this->db->query($sql);
     }
     
@@ -119,5 +119,14 @@ parent::__construct();
         $filas=$this->db->affected_rows();
         return $filas;
     }
+
+    public function inscribir($datos)
+    {
+        $sql='UPDATE `pa_to_us` SET `Id_Usuari` =' . $_SESSION["id"]. ' WHERE `pa_to_us`.`Id_Pa_To_Us` = ' . $datos["idPa"];
+        $this->db->query($sql);
+        $filas=$this->db->affected_rows();
+        return $filas;
+    }
+
 }
 ?>
