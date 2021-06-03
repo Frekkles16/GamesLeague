@@ -192,7 +192,7 @@
                         </select>
                         <br><br><br>    
                         <select id="tipo_partida" onchange="datos_partidas('<?php echo base_url(); ?>')">
-                            <option value="0" class="">Selecciona partir</option>
+                            <option value="0" class="">Selecciona partit</option>
                             <option value="C1" class="">Quarts de final 1</option>
                             <option value="C2" class="">Quarts de final 2</option>
                             <option value="C3" class="">Quarts de final 3</option>
@@ -206,11 +206,18 @@
                             <div class="col-md-12 col-sm-12" id="foto">
                                 
                             </div>
-                            
+                            <br>
+                            <div class="col-12">
+                                <select id="users_partida">
+                                    <option value="0" class="">Selecciona guanyador</option>
+                                </select>
+                            </div>
                         </div>
-                        <br>
+                        
+                        
                         <div class="m-0 row justify-content-center boto">
-                            <button class="btn mx-auto btn-warning boton fonts" onclick="modificarTorneo(<?php echo base_url(); ?>)">Modificar torneig</button>
+                            <button class="btn mx-auto btn-warning boton fonts" onclick="validado(<?php echo base_url(); ?>)">Modificar torneig</button>
+                        </div>
                         </div>
                     </form>
                 </div>

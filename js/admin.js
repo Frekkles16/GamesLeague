@@ -88,9 +88,32 @@ function datos_partidas(link) {
     http.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById('foto').innerHTML = this.responseText;
+            users_partida(link, document.getElementById('tipo_partida').value, document.getElementById('torneos_v').value);
         }
     };
     http.open("POST", link + "php/datosPartida.php", true);
     http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     http.send("tipo=" + document.getElementById('tipo_partida').value + "&torneo=" + document.getElementById('torneos_v').value);
+}
+function users_partida(link, tipo, torneo) {
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById('users_partida').innerHTML = this.responseText;
+        }
+    };
+    http.open("POST", link + "php/usersPartida.php", true);
+    http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    http.send("tipo=" + tipo + "&torneo=" + torneo);
+}
+function validado(link) {
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById('users_partida').innerHTML = this.responseText;
+        }
+    };
+    http.open("POST", link + "php/validado.php", true);
+    http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    http.send("ganador=" + document.getElementById('users_partida').value + "&torneo=" + document.getElementById('torneos_v').value);
 }
