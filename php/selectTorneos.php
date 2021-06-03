@@ -12,7 +12,7 @@ try {
         $conectar = new PDO('mysql:host='.$host.';dbname='.$basedatos, $usuario, $contrasena);
 
 
-        $query = $conectar->prepare("SELECT Id_Torneig, Nom, Data FROM torneig WHERE Id_Admin = 1");
+        $query = $conectar->prepare("SELECT Id_Torneig, Nom, Data FROM torneig WHERE Id_Admin = ". $_SESSION['id']);
         $query->execute();
         $data = $query->fetchAll();
 

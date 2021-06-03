@@ -31,7 +31,7 @@ class torneig extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('inicionew');
+		$this->load->view('inicio');
 	}
 
 
@@ -134,8 +134,14 @@ class torneig extends CI_Controller {
 	        }
 	    }else
 	    {
-	    	$this->perfil();
+	    	if ($_SESSION['tipus'] == 'admin') {
+	    		$this->load->view('admin');
+	    	}else
+	    	{
+	    		$this->perfil();
 
+	    	}
+	    	
 	    }
     }
 

@@ -92,3 +92,29 @@ function crearAdmin(link)
 }
 
 
+function cargar_torneos_validar(link)
+{
+  var http = new XMLHttpRequest();
+  http.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      const text = '<option value="0" class="">Selecciona:</option>' + this.responseText;
+      document.getElementById("torneos_v").innerHTML = text;
+    }
+  };
+
+  http.open("GET", link + "php/selectTorneos.php", true);
+  http.send(null);
+}
+
+function datos_partidas(link)
+{
+  var http = new XMLHttpRequest();
+    http.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById('foto').innerHTML = this.responseText;
+      }
+    };
+    http.open("POST", link + "php/datosPartida.php", true);
+    http.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+    http.send("tipo=" + document.getElementById('tipo_partida').value + "&torneo=" + document.getElementById('torneos_v').value);
+}

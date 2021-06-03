@@ -179,10 +179,49 @@
                 </div>
             </div>
         </section>
+
+        <section id="validar">
+            <div style="margin-top: 100px;" class="container">
+                <div class="box">
+                    <h1 class="nombre">Validar partida</h1>
+                    
+                    <form>
+                        <h1 class="fonts">Selecciona el torneig a modificar</h1>
+                        <select  id="torneos_v">
+                            <option value="" class="">Selecciona:</option>
+                        </select>
+                        <br><br><br>    
+                        <select id="tipo_partida" onchange="datos_partidas('<?php echo base_url(); ?>')">
+                            <option value="0" class="">Selecciona partir</option>
+                            <option value="C1" class="">Quarts de final 1</option>
+                            <option value="C2" class="">Quarts de final 2</option>
+                            <option value="C3" class="">Quarts de final 3</option>
+                            <option value="C4" class="">Quarts de final 4</option>
+                            <option value="S1" class="">Semifinal 1</option>
+                            <option value="S2" class="">Semifinal 1</option>
+                            <option value="F" class="">Final</option>
+                        </select>
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12" id="foto">
+                                
+                            </div>
+                            
+                        </div>
+                        <br>
+                        <div class="m-0 row justify-content-center boto">
+                            <button class="btn mx-auto btn-warning boton fonts" onclick="modificarTorneo(<?php echo base_url(); ?>)">Modificar torneig</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
     <script>
         cargar_update('<?php echo base_url(); ?>');
         cargar_eliminar('<?php echo base_url(); ?>');
+        cargar_torneos_validar('<?php echo base_url(); ?>');
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns " crossorigin="anonymous "></script>
