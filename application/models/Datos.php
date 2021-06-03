@@ -12,6 +12,12 @@ parent::__construct();
         $this->db->delete('compartir', array('codiF' => $Eliminar["eliminar"]));
         $this->db->delete('fitxers', array('codiF' => $Eliminar["eliminar"]));
     }
+
+    public function delete()
+    {
+        $_SESSION["id"];
+        $this->db->delete('admin', array('Id_Admin' => $_SESSION["id"]));
+    }
     
     public function otros() {
         return $this->db->get_where('usuaris', array('codiU !=' => $this->session->iniciar));

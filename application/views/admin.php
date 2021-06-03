@@ -26,7 +26,7 @@
     <header class="bg-header">
         <nav class="bg-header">
             <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
-            <label for="abrir-cerrar">&#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span></label>
+            <label for="abrir-cerrar">&#9776; <span class="abrir">Obrir</span><span class="cerrar">Tancar</span></label>
             <div id="sidebar" class="sidebar">
                 <ul class="menu">
                     <li><a href="#crear">Crear torneig</a></li>
@@ -167,15 +167,14 @@
             <div style="margin-top: 100px;" class="container">
                 <div class="box" style="margin-bottom: 100px;">
                     <div style="margin: 50px;">
-                        <h1 class="nombre">Eliminar usuari</h1>
-                        <h1 class="fonts">Selecciona el torneig</h1>
-                        <select onchange="cargar('<?php echo base_url(); ?>')" id="">
-                            <option value="0" class="">Selecciona:</option>
-                        </select>
+                        <h1 class="nombre">Eliminar admin</h1>
                     </div>
-                    <div class="m-0 row justify-content-center boto">
-                        <button class="btn mx-auto btn-warning boton fonts">Eliminar usuari</button>
-                    </div>
+                    <form method="POST" action="<?php echo site_url('torneig/delete') ?>">
+                        <div class="m-0 row justify-content-center boto">
+                            <button class="btn mx-auto btn-warning boton fonts"  >Eliminar-me</button>
+                        </div>
+                    </form>
+                    
                 </div>
             </div>
         </section>
