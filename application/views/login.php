@@ -44,17 +44,17 @@
                         </div>
 
                         <div class="row">
-                            <span class="icn col-md-12 col-sm-12 text-center lock" style="margin-bottom: 50px;">
+                            <span class="icon col-md-12 col-sm-12 text-center lock" style="margin-bottom: 50px;">
                                 <i class="fas fa-user fa-9x fa-align-center"></i>
                             </span>
                             <div class="col-md-6 col-sm-12 form_group">
-                                <span class="icn text-center lock">
+                                <span class="icon text-center lock">
                                     <i class="fas fa-user-shield fa-2x fa-align-center"></i>
                                 </span>
                                 <?php echo form_input(['placeholder'=>'Usuari','name'=>'user','type'=>'text','class'=>'in form_filed','style'=>'color: white;']); ?>
                             </div>
                             <div class="col-md-6 col-sm-12 " style="margin-bottom: 50px;">
-                                <span class="icn text-center lock">
+                                <span class="icon text-center lock">
                                     <i class="fas fa-key fa-2x fa-align-center"></i>
                                 </span>
                                 <?php echo form_input(['placeholder'=>'Contrasenya','name'=>'passwd','type'=>'password','class'=>'in custom-input','style'=>'color: white;']); ?>

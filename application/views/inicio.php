@@ -38,10 +38,10 @@
                 <a class="nav-link  f-size-s" href="<?php echo site_url('torneig/registro') ?>">Registrarse</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  f-size-s" href="?>">Speech Elevator</a>
+                <a class="nav-link  f-size-s" href=#speech>Speech Elevator</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  f-size-s" href="?>">Jocs</a>
+                <a class="nav-link  f-size-s" href=#jocs>Jocs</a>
               </li>
             </ul>
           </div>
@@ -92,25 +92,25 @@
                 <p class="f-size-s m left">tramposos</p>
             </div>
             <div class=" icn col-md-4 col-sm-12 centrar left">
-                <p class="fonts m">Seguiment d'estadístiques personals diferenciades en cada joc</p>
+                <p class="fonts fonts_inicio m">Seguiment d'estadístiques personals diferenciades en cada joc</p>
             </div>
             <div class=" icn col-md-4 col-sm-12 centrar left">
-                <p class="fonts m">Competitivitat amb total respecte entre adversaris</p>
+                <p class="fonts fonts_inicio m">Competitivitat amb total respecte entre adversaris</p>
             </div>
             <div class=" icn col-md-4 col-sm-12 centrar left">
-                <p class="fonts m">Seguretat davant els competidors que posen falsos Resultats</p>
+                <p class="fonts fonts_inicio m">Seguretat davant els competidors que posen falsos Resultats</p>
             </div>
         </div>
     </div>
     <div class="video">
             <div class="">
-                <video width="400" style="margin-top: 100px;margin-bottom: 100px;" class="border" controls loop>
+                <video width="400" style="margin-top: 100px;margin-bottom: 100px;" class="border" controls loop id="speech">
                     <source src="<?php echo base_url();?>/img/9O9J0UHTM0CQCBYO.mp4">
                 </video>
             <h2 class="f-size-s text-center">Elevator speech</h2>
         </div>
     </div>
-    <div class="juegos">
+    <div class="juegos" id="jocs">
         <div class="lol padre col-md-6 col-sm-12">
             <img src="<?php echo base_url();?>img/lol.jpg" alt="" class="jugador " style="margin: 0 auto; display:flex">
             <div class="card-title text-center" style="color: white;"><p class="f-size-s" style="margin-left: 5px;">LOL</p>

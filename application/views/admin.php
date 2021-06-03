@@ -34,7 +34,7 @@
                     <li><a href="#eliminar">Eliminar torneig</a></li>
                     <li><a href="#usuario">Crear usuari administrador</a></li>
                     <li><a href="#eliminarusu">Eliminar torneig</a></li>
-                    <li><a href="#" style="color: red;">Log Out</a></li>
+                    <li><a href="<?php echo site_url('torneig/logout')?>" style="color: red;">Log Out</a></li>
                 </ul>
             </div>
         </nav>

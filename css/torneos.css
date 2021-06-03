@@ -25,6 +25,37 @@
     color: #FF5E00;
 }
 
+.titulos_torneos {
+    font-size: 1.5em;
+    color: white;
+}
+
+@media (max-width: 845px) {
+    .nombre {
+        margin-top: 40px;
+        font-size: 1em;
+        color: #FF5E00;
+    }
+    .titulos_torneos {
+        font-size: 1.2em;
+        color: white;
+    }
+}
+
+@media (max-width:400px) {
+    .nombre {
+        margin-top: 40px;
+        font-size: 1em;
+        color: #FF5E00;
+        text-align: center;
+    }
+    .titulos_torneos {
+        font-size: 1.2em;
+        color: white;
+        text-align: center;
+    }
+}
+
 .btn {
     margin-top: 100px;
 }
@@ -45,6 +76,17 @@
     border-color: black;
 }
 
+@media (max-width:945px) {
+    .btn-style {
+        background-color: #FF5E00;
+        width: 100px;
+        height: 50px;
+        border-radius: 50px;
+        font-size: 1.5em;
+        border-color: #FF5E00;
+    }
+}
+
 @media (max-width: 768px) {
     .rt {
         margin: 0 auto;
@@ -53,12 +95,11 @@
     }
     .btn-style {
         background-color: #FF5E00;
-        width: 150px;
-        height: 75px;
+        width: 100px;
+        height: 50px;
         border-radius: 50px;
-        font-size: 2em;
+        font-size: 1.5em;
         border-color: #FF5E00;
-        margin-bottom: 50px;
     }
 }
 
@@ -233,6 +274,7 @@ label[for="abrir-cerrar"] {
     color: #fff;
     display: inline-block;
     width: 100%;
+    text-align: right;
 }
 
 .cerrar {
@@ -253,8 +295,7 @@ input#abrir-cerrar:checked~#sidebar {
 
 input#abrir-cerrar:checked+label[for="abrir-cerrar"],
 input#abrir-cerrar:checked~#contenido {
-    margin-left: 300px;
-    transition: margin-left .4s;
+    text-align: end;
 }
 
 input#abrir-cerrar:checked+label[for="abrir-cerrar"] .cerrar {
@@ -331,13 +372,6 @@ h1 {
     padding: 1rem;
 }
 
-.nombre {
-    font-family: 'Kanit', sans-serif;
-    color: white !important;
-    text-align: center;
-    font-size: 2.5em;
-}
-
 .abrir-cerrar {
     color: #2E88C7;
     font-size: 1rem;
@@ -347,4 +381,14 @@ h1 {
     position: fixed;
     top: 0;
     z-index: 1;
+}
+
+.icon {
+    color: #FF5E00;
+}
+
+.icon :hover {
+    background-image: linear-gradient( 145deg, #f81f01, #8b6c7a) !important;
+    -webkit-background-clip: text;
+    color: transparent;
 }

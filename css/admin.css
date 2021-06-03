@@ -190,6 +190,7 @@ label[for="abrir-cerrar"] {
     color: #fff;
     display: inline-block;
     width: 100%;
+    text-align: right;
 }
 
 .cerrar {
@@ -210,8 +211,7 @@ input#abrir-cerrar:checked~#sidebar {
 
 input#abrir-cerrar:checked+label[for="abrir-cerrar"],
 input#abrir-cerrar:checked~#contenido {
-    margin-left: 300px;
-    transition: margin-left .4s;
+    text-align: end;
 }
 
 input#abrir-cerrar:checked+label[for="abrir-cerrar"] .cerrar {

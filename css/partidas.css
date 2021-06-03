@@ -40,7 +40,6 @@
 }
 
 .foto-perfil {
-    background-color: #FF5E00;
     width: 125px;
     height: 125px;
     border-radius: 150px;
@@ -50,10 +49,10 @@
 }
 
 .foto {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 50px;
     margin: 0 auto;
     display: block;
 }
@@ -67,6 +66,7 @@
 .partida2 {
     margin: 20px 0px;
     margin-right: 0px;
+    margin: 0 auto;
 }
 
 .n1 {
@@ -85,7 +85,6 @@
         margin: 0 auto;
     }
     .foto-perfil {
-        background-color: #FF5E00;
         width: 75px;
         height: 75px;
         border-radius: 150px;
@@ -94,10 +93,10 @@
         display: block;
     }
     .foto {
-        width: 50px;
-        height: 50px;
+        width: 75px;
+        height: 75px;
         padding: 5px;
-        border-radius: 20px;
+        border-radius: 50px;
         margin: 0 auto;
         display: block;
     }
