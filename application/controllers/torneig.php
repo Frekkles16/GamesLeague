@@ -218,6 +218,13 @@ class torneig extends CI_Controller {
         }
     }
 
+    public function logout()
+    {
+    	session_destroy();
+    	echo '<script> alert("Adeu, Torna aviat!"); </script>';
+    	$this->load->view('inicio');
+    }
+
 
   //   public function crearTorneo()
   //   {

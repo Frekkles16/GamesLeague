@@ -24,7 +24,6 @@
 </head>
 
 <body>
-    <!--DE AQUI-->
     <header class="">
         <nav class="bg-header">
             <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
@@ -34,13 +33,11 @@
                     <li><a href="<?php echo site_url('torneig/perfil')?>">El teu perfil</a></li>
                     <li><a href="<?php echo site_url('torneig/ranking') ?>">Ranking</a></li>
                     <li><a href="<?php echo site_url('torneig/torneig')?>">Tornejos</a></li>
-                    <li><a href="#" style="color: red;">Logout</a></li>
-                    <li><a href="#eliminarusu">Eliminar torneig</a></li>
+                    <li><a href="<?php echo site_url('torneig/logout')?>" style="color: red;">Log Out</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <!--HASTA AQUI-->
 
     <main class="back">
         <section class="perfil col-md-2 col-sm-6">
