@@ -29,11 +29,10 @@
             <label for="abrir-cerrar">&#9776; <span class="abrir">Obrir</span><span class="cerrar">Tancar</span></label>
             <div id="sidebar" class="sidebar">
                 <ul class="menu">
-                    <li><a href="<?php echo site_url('torneig/perfil')?>">El teu perfil</a></li>
-                    <li><a href="#modificar">Modificar torneig</a></li>
-                    <li><a href="#eliminar">Eliminar torneig</a></li>
-                    <li><a href="#usuario">Crear usuari administrador</a></li>
-                    <li><a href="#eliminarusu">Eliminar torneig</a></li>
+                <li><a href="<?php echo site_url('torneig/perfil')?>">El teu perfil</a></li>
+                    <li><a href="<?php echo site_url('torneig/ranking') ?>">Ranking</a></li>
+                    <li><a href="<?php echo site_url('torneig/torneig')?>">Tornejos</a></li>
+                    <li><a href="<?php echo site_url('torneig/logout')?>" style="color: red;">Log Out</a></li>
                 </ul>
             </div>
         </nav>
