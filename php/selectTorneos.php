@@ -8,6 +8,7 @@ $contrasena = '';
 session_start();
 
 try {
+        header("Access-Control-Allow-Origin: *");
         $conectar = new PDO('mysql:host='.$host.';dbname='.$basedatos, $usuario, $contrasena);
 
 

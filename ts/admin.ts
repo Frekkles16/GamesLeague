@@ -90,3 +90,5 @@ function crearAdmin(link)
     http.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
     http.send("user=" + document.getElementById("user").value + "&passw=" + document.getElementById("passw").value);
 }
+
+

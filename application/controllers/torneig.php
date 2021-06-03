@@ -177,6 +177,21 @@ class torneig extends CI_Controller {
     	$this->load->view('clasificacion', $datos);
     }
 
+    public function delete()
+    {
+    	$this->load->model('datos');
+    	$rows= $this->datos->eliminarAdmin();
+    	$this->index();
+    	$rows = $this->Inicio->iniciarSesion($datos);
+        if($rows > 0) {
+        	session_destroy();
+        	echo '<script> alert("Admin esborrat correctament"); </script>';
+        } else {
+            $this->load->view('admin');
+            echo '<script> alert("Admin esborrat correctament"); </script>';
+        }
+    }
+
 
   //   public function crearTorneo()
   //   {
