@@ -63,6 +63,11 @@ parent::__construct();
         return $this->db->get_where('usuari', array('Nom_Usuari' => $_SESSION["user"]));
     }
 
+    public function admin() {
+
+        return $this->db->get_where('admin', array('Nom' => $_SESSION["user"]));
+    }
+
     public function torneos_mios() {
         $id = $_SESSION["id"];
         $sql='SELECT `torneig`.*, `videojoc`.`Nom_Videojoc` FROM `torneig` INNER JOIN `pa_to_us` ON `pa_to_us`.`Id_Torneig` = `torneig`.`Id_Torneig` INNER JOIN `videojoc` ON `torneig`.`Id_Videojoc` = `videojoc`.`Id_Videojoc` WHERE `pa_to_us`.`Id_Usuari` = '. $id . ' GROUP BY `torneig`.`Id_Torneig`';

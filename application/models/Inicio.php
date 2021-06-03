@@ -12,5 +12,13 @@ parent::__construct();
         $filas=$this->db->affected_rows();
         return $filas;
     }
+
+    public function iniciarSesionAd($datos){
+
+        $sql='SELECT Nom FROM admin WHERE Nom LIKE "'.$datos["user"].'" AND Contrasenya LIKE "'.$datos["passwd"].'"';
+        $this->db->query($sql);
+        $filas=$this->db->affected_rows();
+        return $filas;
+    }
 }
 ?>
