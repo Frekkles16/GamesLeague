@@ -104,17 +104,17 @@ parent::__construct();
         $sql='SELECT `usuari`.`Nom_Usuari`FROM `pa_to_us` LEFT JOIN `usuari` ON `pa_to_us`.`Id_Usuari`= `usuari`.`Id_Usuari`LEFT JOIN `partida` ON `partida`.`Id_Partida` = `pa_to_us`.`Id_Partida` WHERE `pa_to_us`.`Id_Torneig` = '. $torneo . ' ORDER BY `pa_to_us`.`Id_Partida`';
         return $this->db->query($sql);
     }
-
-    // public function crearTorneo($datos)
-    // {
-    //     $sql='INSERT INTO torneig(Nom, Data, Capacitat, N_Partides, Id_Admin, Id_Videojoc) VALUES ("'.$datos["nom"].'","'.$datos["data"].'", 8, 7, 1, "'.$datos["juego"].'")';
-    //     $this->db->query($sql);
-    //     $filas=$this->db->affected_rows();
-    //     return $filas;
-    // }
     
     public function compartirArchivo($Compartir) {
         $sql='INSERT INTO compartir(codiF, codiUC) VALUES ("'.$Compartir["fitxerCompartir"].'","'.$Compartir["usuariCompartir"].'")';
+        $this->db->query($sql);
+        $filas=$this->db->affected_rows();
+        return $filas;
+    }
+
+    public function afegirCompte($datos)
+    {
+        $sql='INSERT INTO compte(Id_Usuari, Id_Videojoc, Nom_Compte) VALUES ('.$_SESSION['id'].','.$datos["juego"].',"'.$datos["nombre"] .'")';
         $this->db->query($sql);
         $filas=$this->db->affected_rows();
         return $filas;

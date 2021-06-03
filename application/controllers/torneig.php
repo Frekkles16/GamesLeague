@@ -223,11 +223,20 @@ class torneig extends CI_Controller {
     	$this->load->view('inicio');
     }
 
-public function ranking(){
+	public function ranking(){
     
         $this->load->model('datos');
         $datos['mios'] = $this->datos->mios();
         $this->load->view('ranking', $datos);
     }
+
+    public function afegirCompte()
+    {
+    	$datos=$this->input->post();
+    	$this->load->model('datos');
+        $row = $this->datos->afegirCompte($datos);
+    }
+
+
 
 }
