@@ -8,7 +8,7 @@ $contrasena = '';
 session_start();
 
 try {
-    header("Access-Control-Allow-Origin: *");
+    // header("Access-Control-Allow-Origin: *");
     $conectar = new PDO('mysql:host='.$host.';dbname='.$basedatos, $usuario, $contrasena);
     $query = $conectar->prepare("SELECT Nom_Usuari , PuntsFifa  FROM usuari order by PuntsFifa DESC");
     $query->execute();

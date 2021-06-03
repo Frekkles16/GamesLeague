@@ -15,6 +15,6 @@ function load_ranking(link) {
             }
         }
     };
-    http.open("GET", link + "php/" + url, true);
+    http.open("GET", link + "php/" + url + ".php", true);
     http.send(null);
 }
