@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/css.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/torneos.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>css/admin.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -27,7 +26,7 @@
 <header class="">
         <nav class="bg-header">
             <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
-            <label for="abrir-cerrar">&#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span></label>
+            <label for="abrir-cerrar">&#9776; <span class="abrir">Obrir</span><span class="cerrar">Tancar</span></label>
             <div id="sidebar" class="sidebar">
                 <ul class="menu">
                     <li><a href="<?php echo site_url('torneig/perfil')?>">El teu perfil</a></li>
@@ -44,7 +43,7 @@
         </section>
         <?php foreach ($mis_torneos->result_array() as $value): ?>
             <form method="GET" action="<?php echo site_url('torneig/miPartida/' . $value['Id_Torneig'] ) ?>">
-                <div class="row box">
+                <div class="row box mx-auto">
                     <div class="col-md-3 col-sm-3 fonts rt">
                         <h2>Nom torneig</h2>
                         <p class="nombre"><?php echo $value['Nom']?></p>
@@ -69,7 +68,7 @@
         </section>
         <?php foreach ($torneos_all->result_array() as $value): ?>
             <form method="GET" action="<?php echo site_url('torneig/inscripcio/' . $value['Id_Torneig'] ) ?>">
-                <div class="row box">
+                <div class="row box mx-auto">
                     <div class="col-md-3 col-sm-3 fonts rt">
                         <h2>Nom torneig</h2>
                         <p class="nombre"><?php echo $value['Nom']?></p>

@@ -1,45 +1,166 @@
 /*Fondo*/
-    
+
 html {
-    background-image: url(../img/firespark1.jpg);
+    background-color: black !important;
 }
 
 body {
-    background-image: url(../img/firespark1.jpg);
+    background-color: black !important;
     background-repeat: repeat;
     width: 100%;
     height: 100%;
 }
 
 .mid {
-    background-image: url(../img/firespark1.jpg);
+    background-color: black !important;
     background-repeat: repeat;
+    margin-left: 20px;
+    margin-right: 20px;
 }
+
+
 /*End Fondo*/
+
+
 /*Estilos*/
 
 .fonts {
-    font-family: 'Kanit', sans-serif;
     color: white !important;
-    text-align: center;
+    text-align: left;
     font-size: 2em;
+    font-family: "Montserrat", sans-serif;
+}
+
+.fonts-s {
+    color: white !important;
+    text-align: left;
+    font-size: 1.2em;
+    margin-left: 5px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.f-size {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 10em;
+    text-align: left;
+    margin: 0;
+    background: linear-gradient(-90deg, #f81f01, #FF5E00);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 110px;
+}
+
+@media (max-width:992px) {
+    .f-size {
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 6em;
+        text-align: left;
+        margin: 0;
+        background: linear-gradient(-90deg, #f81f01, #FF5E00);
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-bottom: 110px;
+    }
+    .padre {
+        position: relative;
+        /* para poder posicionar el texto de forma absoluta */
+        display: inline-block;
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+        /* para que solo ocupe el ancho de la imagen */
+    }
+}
+
+.f-size-s {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-align: left;
+    margin: 0;
+    margin-left: 5px;
+    background: linear-gradient(180deg, #f81f01, #FF5E00) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+}
+
+@media (max-width: 1015px) {
+    .f-size-s {
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 1.2em;
+        text-align: left;
+        margin: 0;
+        margin-left: 5px;
+        background: linear-gradient(180deg, #f81f01, #FF5E00) !important;
+        -webkit-background-clip: text !important;
+        color: transparent !important;
+    }
+}
+
+@media (max-width: 845px) {
+    .f-size-s {
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-size: 1em;
+        text-align: left;
+        margin: 0;
+        margin-left: 5px;
+        background: linear-gradient(180deg, #f81f01, #FF5E00) !important;
+        -webkit-background-clip: text !important;
+        color: transparent !important;
+    }
+    .icn {
+        background-image: linear-gradient(-90deg, #f81f01, #FF5E00) !important;
+        -webkit-background-clip: text;
+        color: transparent;
+        width: 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    .left {
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .left {
+        text-align: center;
+    }
+    .fonts {
+        visibility: hidden;
+    }
+    .m {
+        margin-bottom: 40px;
+    }
 }
 
 .size {
     margin-top: 20px;
     font-size: 1.5em;
 }
+
+
 /*End Estilos*/
+
+
 /*Cabecera */
 
-.bg-header {
-
-}
+.bg-header {}
 
 nav {
     width: 100%;
     float: right;
 }
+
+
 /*End Cabecera*/
 
 .bg-footer {
@@ -47,6 +168,8 @@ nav {
     padding-bottom: 50px;
     margin-top: 5px;
 }
+
+
 /*Boton*/
 
 .boto {
@@ -69,20 +192,30 @@ nav {
     transform: scale(1.1);
     transition: 0.75s;
 }
+
+
 /*End Boton*/
+
+
 /*Inicio*/
 
 .inicio {
     margin: 225px 0px 10px 0px;
     text-align: center;
 }
+
+
 /*End Inicio*/
+
+
 /*Tablas*/
 
 .tablas {
     margin: 150px 0px 10px 0px;
     text-align: center;
 }
+
+
 /*Tablas*/
 
 @media (max-width: 800px) {
@@ -90,6 +223,8 @@ nav {
         margin: 10px 10px 10px 10px;
     }
 }
+
+
 /*Imagenes*/
 
 .img1 {
@@ -137,15 +272,17 @@ nav {
     }
     .pfoot {
         font-size: 1.2em;
-        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
         color: white !important;
         text-align: center;
         margin-top: 20px;
     }
     .fonts {
-        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
         color: white !important;
-        text-align: center;
+        text-align: left;
         font-size: 1.2em;
     }
 }
@@ -180,7 +317,8 @@ nav {
     }
     .h2 {
         padding: auto !important;
-        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
         color: white !important;
         text-align: center;
         font-size: 2em !important;
@@ -204,21 +342,24 @@ nav {
     }
     .pfoot {
         font-size: 1.4em;
-        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
         color: white !important;
         text-align: center;
         margin-top: 20px;
     }
     .fonts {
-        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
         color: white !important;
-        text-align: center;
+        text-align: left;
         font-size: 1.4em;
     }
     .fonts1 {
-        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
         color: white !important;
-        text-align: center;
+        text-align: left;
         font-size: 2em;
     }
     .img {
@@ -231,7 +372,8 @@ nav {
         margin-bottom: 100px;
     }
     .h2 {
-        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
         color: white !important;
         text-align: center;
         font-size: 3em !important;
@@ -246,7 +388,8 @@ nav {
     }
     .pfoot {
         font-size: 2em;
-        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
         color: white !important;
         text-align: center;
         margin-top: 20px;
@@ -261,7 +404,8 @@ nav {
         margin-bottom: 100px;
     }
     .h2 {
-        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
         color: white !important;
         text-align: center;
         font-size: 3em !important;
@@ -308,7 +452,8 @@ nav {
 }
 
 .font {
-    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
     color: black !important;
     text-align: center;
 }
@@ -332,8 +477,16 @@ nav {
 }
 
 .icn {
-    color: #FF5E00;
+    background-image: linear-gradient(-90deg, #f81f01, #FF5E00) !important;
+    -webkit-background-clip: text;
+    color: transparent;
     width: 200px;
+}
+
+.icn :hover {
+    background-image: linear-gradient( 145deg, #f81f01, #ee076e);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .centrar {
@@ -346,7 +499,8 @@ nav {
 
 .fontb {
     font-size: 1.2em;
-    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
     color: black !important;
     text-align: center;
 }
@@ -363,7 +517,8 @@ nav {
 
 .fontf {
     font-size: 1.4em;
-    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
     color: #B9B9B9 !important;
     text-align: center;
     margin-top: 20px;
@@ -371,7 +526,8 @@ nav {
 
 .copy {
     font-size: 1.4em;
-    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
     color: #B9B9B9 !important;
     text-align: center;
     margin-top: 20px;
@@ -389,4 +545,52 @@ nav {
     margin-bottom: 75px;
 }
 
+.foto_lol {
+    width: 200px;
+    height: 200px;
+}
 
+.inicio {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.jugador {
+    width: 500px;
+}
+
+.juegos {
+    margin-left: 10px;
+}
+
+.padre {
+    position: relative;
+    /* para poder posicionar el texto de forma absoluta */
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    /* para que solo ocupe el ancho de la imagen */
+}
+
+.card-title {
+    position: absolute;
+    /* posición absolute con respecto al padre */
+    top: 175px;
+    /* posicionada en la esquina inferior derecha */
+}
+
+.iconos {
+    margin-bottom: 50px;
+}
+
+.fondo {
+    background-image: url(/img/lol.jpg);
+}
+
+.video {
+    text-align: center;
+}
+
+.borde {
+    border: #FF5E00 solid 5px;
+}

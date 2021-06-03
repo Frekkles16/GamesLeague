@@ -8,6 +8,7 @@
     <title>GAMESLEAGUE</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/css.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/perfil.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>css/registro.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/admin.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.css">
     <script src="<?php echo base_url(); ?>js/perfil.js"></script>
@@ -28,7 +29,7 @@
     <header class="">
         <nav class="bg-header">
             <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
-            <label for="abrir-cerrar">&#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span></label>
+            <label for="abrir-cerrar">&#9776; <span class="abrir">Obrir</span><span class="cerrar">Tancar</span></label>
             <div id="sidebar" class="sidebar">
                 <ul class="menu">
                     <li><a href="<?php echo site_url('torneig/perfil')?>">El teu perfil</a></li>
@@ -94,6 +95,29 @@
         </div>
 
     </div>
+    <form action="<?php echo site_url('torneig/afegirCompte') ?>" method="POST">
+        <div class="perfil-body" style="margin-top: 50px;">
+            <p class="fonts">Seleciona el joc per afegir la teva compte </p>
+            <div class="select mx-auto" style="width:150px;">
+                <select id="" name="juego">
+                <option value="0" class="">Selecciona:</option>
+                <option value="1" class="">LOL</option>
+                <option value="2" class="">FIFA</option>
+                </select>
+            </div>
+        </div>
+        <div class="tabla mx-auto row">
+            <div class="col-md-6 col-sm-12 form_group mx-auto">
+                <span class="icn text-center lock">
+                    <i class="fas fa-gamepad fa-2x fa-align-center"></i>
+                </span>
+                <?php echo form_input(['placeholder'=>'Nom usuari videojoc','name'=>'nombre','type'=>'text','class'=>'in form_filed','style'=>'color: white;']); ?>
+                <div class="m-0 row justify-content-center boto">
+                    <button class="btn mx-auto btn-warning boton fonts" type="submit">Afegir compte</button>
+                </div>
+            </div>
+        </div>
+    </form>
     <footer class="bg-footer">
         <div class="bg-footer">
             <hr color="#FF5E00 " style="margin-top: 300px; " size="0.5px ">

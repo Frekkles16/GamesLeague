@@ -25,7 +25,7 @@
 <header class="">
         <nav class="bg-header">
             <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
-            <label for="abrir-cerrar">&#9776; <span class="abrir">Abrir</span><span class="cerrar">Cerrar</span></label>
+            <label for="abrir-cerrar">&#9776; <span class="abrir">Obrir</span><span class="cerrar">Tancar</span></label>
             <div id="sidebar" class="sidebar">
                 <ul class="menu">
                     <li><a href="<?php echo site_url('torneig/perfil')?>">El teu perfil</a></li>

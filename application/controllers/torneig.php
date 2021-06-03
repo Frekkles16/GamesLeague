@@ -235,6 +235,8 @@ class torneig extends CI_Controller {
     	$datos=$this->input->post();
     	$this->load->model('datos');
         $row = $this->datos->afegirCompte($datos);
+        $this->perfil();
+        echo '<script> alert("Compte afegida correctament"); </script>';    
     }
 
 
