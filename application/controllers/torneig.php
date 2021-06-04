@@ -31,7 +31,7 @@ class torneig extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('admin');
+		$this->load->view('inicio');
 	}
 
 
@@ -254,6 +254,9 @@ class torneig extends CI_Controller {
         $row = $this->datos->afegirCompte($datos);
         $this->perfil();
         echo '<script> alert("Compte afegida correctament"); </script>';    
+    }
+    public function inici(){
+        $this->index();
     }
 
 

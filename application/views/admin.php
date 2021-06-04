@@ -53,14 +53,14 @@
                     
                         <div class="row">
                             <div class="col-md-6 col-sm-12 form_group">
-                                <span class="icn text-center lock">
+                                <span class="icon text-center lock">
                                     <i class="fas fa-user fa-2x fa-align-center"></i>
                                 </span>
                                 <input class="in" type="text" name="nom" id="nom" placeholder="Nom del torneig" style="color: white;">
                             </div>
 
                             <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
+                                <span class="icon text-center lock">
                                     <i class="fas fa-calendar-minus fa-2x fa-align-center"></i>
                                 </span>
                                 <input class="in" type="date" name="data" id="data" placeholder="" style="color: white;" class="">
@@ -93,20 +93,20 @@
 
                         <div class="row">
                             <div class="col-md-6 col-sm-12 form_group">
-                                <span class="icn text-center lock">
+                                <span class="icon text-center lock">
                                     <i class="fas fa-user fa-2x fa-align-center"></i>
                                 </span>
                                 <input class="in" type="text" name="nom" id="u_nom" placeholder="Nom del torneig" style="color: white;">
                             </div>
                             <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
+                                <span class="icon text-center lock">
                                     <i class="fas fa-calendar-minus fa-2x fa-align-center"></i>
                                 </span>
                                 <input class="in" type="date" id="u_data" placeholder="" style="color: white;" class="">
                             </div> 
                         </div>
                         <div class="m-0 row justify-content-center boto">
-                            <button class="btn mx-auto btn-warning boton fonts" onclick="modificarTorneo(<?php echo base_url(); ?>)">Modificar torneig</button>
+                            <button class="btn mx-auto btn-warning boton fonts" onclick="modificarTorneo('<?php echo base_url(); ?>')">Modificar torneig</button>
                         </div>
                     </form>
                 </div>
@@ -134,24 +134,24 @@
                     <h1 class="nombre">Afegir usuari administrador</h1>
                     <form>
                         <div class="row">
-                            <span class="icn col-md-12 col-sm-12 text-center lock">
+                            <span class="icon col-md-12 col-sm-12 text-center lock">
                                 <i class="fas fa-lock fa-9x fa-align-center"></i>
                             </span>
                             
                             <div class="col-md-12 col-sm-12 ">
-                                <span class="icn text-center lock">
+                                <span class="icon text-center lock">
                                     <i class="fas fa-user-shield fa-2x fa-align-center"></i>
                                 </span>
                                 <input class="in" type="text" name="" id="user" placeholder="Nom d'usuari" style="color: white;">
                             </div>
                             <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
+                                <span class="icon text-center lock">
                                     <i class="fas fa-key fa-2x fa-align-center"></i>
                                 </span>
                                 <input class="in" type="password" id="passw" placeholder="Contrasenya" style="color: white;">
                             </div>
                             <div class="col-md-6 col-sm-12 ">
-                                <span class="icn text-center lock">
+                                <span class="icon text-center lock">
                                     <i class="fas fa-key fa-2x fa-align-center"></i>
                                 </span>
                                 <input class="in" type="password" id="passw2" placeholder="Comprovar contrasenya" style="color: white;">

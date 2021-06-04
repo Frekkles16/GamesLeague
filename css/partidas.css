@@ -1,18 +1,21 @@
 .style {
-    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
     color: white !important;
     font-size: 1.5em;
 }
 
 .nombre {
-    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
     color: white !important;
     text-align: center;
     font-size: 3em;
 }
 
 .titulo {
-    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
     color: white !important;
     text-align: center;
     font-size: 3.5em;

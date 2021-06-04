@@ -23,13 +23,22 @@
 
 <body>
     <!--DE AQUI-->
-    <header class="bg-header">
-        <nav class="bg-header">
-            <img src="<?php echo base_url();?>img/Logo_solo_Naranja.png" alt="" class="games">
-            <div class="boto">
-                <button class="btn btn-warning boton fonts">Inicia sessió</button>
-                <button class="btn btn-warning boton fonts">Registrarse</button>
-            </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-dark">
+          <!--<a class="navbar-brand" href="#"><img src="<?php echo base_url(); ?>img/Logo_solo_Naranja.png" alt="" class="games"></a>-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav ml-auto " style="margin: 5px;">
+              <li class="nav-item active">
+                <a class="nav-link f-size-s" href="<?php echo site_url('torneig/login')?>">Iniciar sessió</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link f-size-s" href="<?php echo site_url('torneig/inici')?>">Inici</a>
+              </li>
+            </ul>
+          </div>
         </nav>
     </header>
     <!--HASTA AQUI-->
