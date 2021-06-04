@@ -175,13 +175,12 @@
                             <button class="btn mx-auto btn-warning boton fonts"  >Eliminar-me</button>
                         </div>
                     </form>
-                    
                 </div>
             </div>
         </section>
 
         <section id="validar">
-            <div style="margin-top: 100px;" class="container">
+            <div class="container">
                 <div class="box">
                     <h1 class="nombre">Validar partida</h1>
                     
@@ -214,9 +213,8 @@
                             </div>
                         </div>
                         
-                        
-                        <div class="m-0 row justify-content-center boto">
-                            <button class="btn mx-auto btn-warning boton fonts" onclick="validado('<?php echo base_url(); ?>')">Modificar torneig</button>
+                        <div style="margin-top:20px" class="row justify-content-center boto">
+                            <button class="btn mx-auto btn-warning boton fonts" onclick="validado('<?php echo base_url(); ?>')">Validar Guanyador</button>
                         </div>
                         </div>
                     </form>
