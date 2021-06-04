@@ -58,6 +58,7 @@ class torneig extends CI_Controller {
             else{
             	// $datos["passwd"] = $this->encrypt->encode($datos["passwd"]);
                 $this->load->model('Registro');
+                $datos['passwd'] = md5($datos['passwd']);
                 $this->Registro->inserirDades($datos);
                 $_SESSION["user"] = $datos['user'];
                 $this->load->model('datos');
@@ -110,6 +111,7 @@ class torneig extends CI_Controller {
 	            	}else
 	            	{
 		            	$this->load->model('Inicio');
+		            	$datos["passwd"] = md5($datos["passwd"]);
 		                $rows = $this->Inicio->iniciarSesion($datos);
 
 		                if($rows > 0) {
