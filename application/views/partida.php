@@ -91,15 +91,6 @@
                             endforeach;
                             ?>
                        </div>
-                         <!-- <form method="POST" action="<?php echo site_url('torneig/miPartida/') ?>">
-                            <div class="input">
-                                <input style="color: white;" class="mx-auto" type="file" name="resultado" id="resultado">
-                            </div>
-                       
-                            <div class="m-0 row justify-content-center boto">
-                                <button class="btn mx-auto btn-warning boton fonts">Enviar resultado</button>
-                            </div>
-                        </form> -->
 
                     </div>
                 </div>
