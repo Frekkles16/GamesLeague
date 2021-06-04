@@ -113,7 +113,8 @@ function validado(link) {
             document.getElementById('users_partida').innerHTML = this.responseText;
         }
     };
+    alert("aaa");
     http.open("POST", link + "php/validado.php", true);
     http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    http.send("ganador=" + document.getElementById('users_partida').value + "&torneo=" + document.getElementById('torneos_v').value);
+    http.send("ganador=" + document.getElementById('users_partida').value + "&torneo=" + document.getElementById('torneos_v').value + "&tipo=" + document.getElementById('tipo_partida').value);
 }
