@@ -216,7 +216,7 @@
                         
                         
                         <div class="m-0 row justify-content-center boto">
-                            <button class="btn mx-auto btn-warning boton fonts" onclick="validado(<?php echo base_url(); ?>)">Modificar torneig</button>
+                            <button class="btn mx-auto btn-warning boton fonts" onclick="validado('<?php echo base_url(); ?>')">Modificar torneig</button>
                         </div>
                         </div>
                     </form>

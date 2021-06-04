@@ -31,7 +31,7 @@ class torneig extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('admin');
+		$this->load->view('inicio');
 	}
 
 
@@ -59,6 +59,7 @@ class torneig extends CI_Controller {
             	// $datos["passwd"] = $this->encrypt->encode($datos["passwd"]);
                 $this->load->model('Registro');
                 $this->Registro->inserirDades($datos);
+                $_SESSION["user"] = $datos['user'];
                 $this->load->model('datos');
 
                 $datos['mios'] = $this->datos->mios();
