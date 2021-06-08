@@ -216,10 +216,16 @@ class torneig extends CI_Controller {
     {
     	$datos=$this->input->post();
     	$this->load->model('datos');
-        $row = $this->datos->inscribir($datos);
-        echo '<script> alert("Inscrit correctament"); </script>';
-        $this->torneig();
-           
+    	$rows= $this->datos->comprovar($datos);
+    	if ($rows > 0 ) {
+	    	$this->load->model('datos');
+	        $row = $this->datos->inscribir($datos);
+	        echo '<script> alert("Inscrit correctament"); </script>';
+	        $this->torneig();
+    	}else{
+    		echo '<script> alert("Per poder inscribir-te necesites tenir una compte del Videojoc"); </script>';
+    		$this->perfil();
+    	}
     }
 
 

@@ -197,7 +197,7 @@
                             <option value="C3" class="">Quarts de final 3</option>
                             <option value="C4" class="">Quarts de final 4</option>
                             <option value="S1" class="">Semifinal 1</option>
-                            <option value="S2" class="">Semifinal 1</option>
+                            <option value="S2" class="">Semifinal 2</option>
                             <option value="F" class="">Final</option>
                         </select>
 

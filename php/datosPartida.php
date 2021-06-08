@@ -22,7 +22,7 @@ try {
                 echo '<br> <img class="mx-auto w-100" src="data:'.$value["TipusF"].';base64,'.base64_encode($value["Fitxer"]) .'" alt="Card image cap">';
             }else
             {
-                echo "<p>No hi ha imatge pujada encara</p>";
+                echo "<p style='color: white; margin-top: 10px;'>No hi ha imatge pujada encara</p>";
             }
         }   
         

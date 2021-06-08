@@ -63,7 +63,7 @@
                                 <div class="foto-perfil partida2">
                                     <img src="<?php echo base_url(); ?>img/fifa.jpg" alt="" srcset="" class="foto">
                                 </div>
-                                <p class="style partida2 n1 text-center" style="margin: 20px;"><?php echo $value['Nom_Usuari'] ?></p>
+                                <p class="style partida2 n1 text-center" style="margin: 20px;"><?php echo $value['Nom_Compte'] ?></p>
                             </div>
 
                         <?php endforeach; ?>
@@ -84,6 +84,11 @@
                                     echo form_submit(['name'=>'boto','class'=>'btn btn-warning fonts mt-4 text-center ','value'=>'Pujar Archiu']);
                                 
                                     echo form_close();
+                                    if($value['Tipus'] == 'C1')
+                                    {
+                                        echo "<button class='btn btn-danger fonts mt-4 text-center'> Desapuntarme  </button>";
+                                    }
+                                    
                                }else{
                                 echo "<h3 style='Color: white;'>Ja hi ha arxiu pujat</h3>";
                                }   

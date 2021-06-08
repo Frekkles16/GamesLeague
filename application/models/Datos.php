@@ -6,6 +6,13 @@ parent::__construct();
  $this->load->database();
  // session_start();
 }
+    
+    public function archivoUp($datos){
+        $sql='UPDATE partida SET `TipusF` = "' . $datos["tipusF"] . '", `Fitxer` = "' . $datos["fitxer"] . '" WHERE `Id_Partida` = ' .$datos["id"];
+        $this->db->query($sql);
+        $filas=$this->db->affected_rows();
+        return $filas;
+    }
 
     public function delete()
     {
@@ -44,7 +51,7 @@ parent::__construct();
 
     public function JugadoresPartida($id_partida)
     {
-        $sql='SELECT `pa_to_us`.Id_Pa_To_Us, `usuari`.* FROM `pa_to_us` INNER JOIN `usuari` ON `pa_to_us`.`Id_Usuari` = `usuari`.`Id_Usuari` WHERE `pa_to_us`.`Id_Partida` = '. $id_partida;
+        $sql='SELECT `pa_to_us`.Id_Pa_To_Us, `usuari`.*, compte.* FROM `pa_to_us` INNER JOIN `usuari` ON `pa_to_us`.`Id_Usuari` = `usuari`.`Id_Usuari` INNER JOIN compte ON compte.Id_Usuari = usuari.Id_Usuari WHERE `pa_to_us`.`Id_Partida` = '. $id_partida . ' AND compte.Id_Videojoc = (SELECT Id_Videojoc FROM torneig LEFT JOIN partida ON torneig.Id_Torneig = partida.Id_Torneig WHERE partida.Id_Partida = ' . $id_partida . ')';
         return $this->db->query($sql);
     }
 
@@ -71,6 +78,14 @@ parent::__construct();
     public function inscribir($datos)
     {
         $sql='UPDATE `pa_to_us` SET `Id_Usuari` =' . $_SESSION["id"]. ' WHERE `pa_to_us`.`Id_Pa_To_Us` = ' . $datos["idPa"];
+        $this->db->query($sql);
+        $filas=$this->db->affected_rows();
+        return $filas;
+    }
+
+    public function comprovar($datos)
+    {
+        $sql='SELECT * FROM `compte` LEFT JOIN torneig ON compte.Id_Videojoc = torneig.Id_Videojoc WHERE compte.Id_Usuari = ' . $_SESSION["id"]  .' AND compte.Id_Videojoc = (SELECT Id_Videojoc FROM torneig LEFT JOIN pa_to_us ON torneig.Id_Torneig = pa_to_us.Id_Torneig WHERE pa_to_us.Id_Pa_To_Us = '. $datos["idPa"] . ')';
         $this->db->query($sql);
         $filas=$this->db->affected_rows();
         return $filas;

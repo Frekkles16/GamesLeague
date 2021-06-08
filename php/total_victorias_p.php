@@ -14,12 +14,12 @@ try {
         $juego = $_POST["juego"];
         $user = $_SESSION["id"];
 
-        $query = $conectar->prepare("SELECT COUNT( `pa_to_us`.`Id_Partida`) AS 'Torneos' FROM `pa_to_us` INNER JOIN `torneig` ON `pa_to_us`.`Id_Torneig` = `torneig`.`Id_Torneig` INNER JOIN `partida` ON `pa_to_us`.`Id_Partida` = `partida`.`Id_Partida` WHERE `pa_to_us`.`Id_Usuari`= $user AND `torneig`.`Id_Videojoc`= $juego AND `partida`.`Resultado` LIKE 'W' ");
+        $query = $conectar->prepare("SELECT COUNT(`Id_Partida`) AS Total FROM partida WHERE `Resultado` = $user");
         $query->execute();
         $data = $query->fetchAll();
 
         foreach ($data as $key => $value) {
-            echo $value["Torneos"];
+            echo $value["Total"];
         }
 
         
