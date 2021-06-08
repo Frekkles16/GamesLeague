@@ -91,5 +91,13 @@ parent::__construct();
         return $filas;
     }
 
+    public function desapuntarme($idpartida)
+    {
+        $sql='UPDATE pa_to_us SET Id_Usuari = NULL WHERE Id_Pa_To_Us= ( SELECT `Id_Pa_To_Us` FROM `pa_to_us` WHERE Id_Partida ='. $idpartida . ' AND Id_Usuari = ' . $_SESSION["id"] . ' )';
+        $this->db->query($sql);
+        $filas=$this->db->affected_rows();
+        return $filas;
+    }
+
 }
 ?>

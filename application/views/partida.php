@@ -86,10 +86,11 @@
                                     echo form_close();
                                     if($value['Tipus'] == 'C1')
                                     {
-                                        echo "<button class='btn btn-danger fonts mt-4 text-center'> Desapuntarme  </button>";
+                                        echo "<form method='POST' action='" . site_url('torneig/desapuntarme/' .$nPartida) . "'><button class='btn btn-danger fonts mt-4 text-center'> Desapuntarme  </button></form>";
                                     }
                                     
                                }else{
+
                                 echo "<h3 style='Color: white;'>Ja hi ha arxiu pujat</h3>";
                                }   
                                     

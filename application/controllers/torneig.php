@@ -69,7 +69,7 @@ class torneig extends CI_Controller {
 
                 $datos2 = $datos['mios']->result_array();
                 $_SESSION["id"] = $datos2[0]['Id_Usuari'];
-                // $this->index();	
+                $_SESSION["tipus"] = 'user';
             }
             
         } else {
@@ -187,7 +187,6 @@ class torneig extends CI_Controller {
                 $this->form_validation->set_rules('arxiu', 'Arxiu','required', ['required'=>'<span class="text-danger">No has seleccionado archivo</span>']);
                 
                 if ($this->form_validation->run() == false){
-                    // $this->load->view('subir');
                 }
             } else{
                $subir = array(
@@ -224,7 +223,7 @@ class torneig extends CI_Controller {
 	        $this->torneig();
     	}else{
     		echo '<script> alert("Per poder inscribir-te necesites tenir una compte del Videojoc"); </script>';
-    		$this->perfil();
+    		$this->torneig();
     	}
     }
 
@@ -264,8 +263,19 @@ class torneig extends CI_Controller {
         $this->perfil();
         echo '<script> alert("Compte afegida correctament"); </script>';    
     }
+
     public function inici(){
         $this->index();
+    }
+
+    public function desapuntarme($idpartida)
+    {
+    	$this->load->model('datos');
+        $row = $this->datos->desapuntarme($idpartida);
+        
+    	echo '<script> alert("Ja no estat inscrit en el torneig"); </script>';
+    	$this->torneig();
+
     }
 
 
